@@ -5,6 +5,7 @@
  */
 
 export class CannotInvokeStartRuleError extends Error {
+    public cause: Error;
     public constructor(e: Error) {
         super();
         this.cause = e;
