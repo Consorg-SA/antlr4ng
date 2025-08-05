@@ -400,7 +400,11 @@ export class ParseTreePatternMatcher {
             const c = chunks[i];
             if (c instanceof TextChunk) {
                 const tc = c;
-                const unescaped = tc.text.replaceAll(this.escape, ""); // TODO: do we need a copy of tc.text here?
+                let unescaped = tc.text, text;
+                do {
+                    text = unescaped;
+                    unescaped = text.replace(this.escape, ""); // TODO: do we need a copy of tc.text here?
+                } while (text != unescaped);
                 if (unescaped.length < tc.text.length) {
                     chunks[i] = new TextChunk(unescaped);
                 }
