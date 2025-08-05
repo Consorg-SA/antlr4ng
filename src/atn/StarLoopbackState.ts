@@ -7,5 +7,5 @@
 import { ATNState } from "./ATNState";
 
 export class StarLoopbackState extends ATNState {
-    public static override readonly stateType = ATNState.STAR_LOOP_BACK;
+    public static /*override*/ readonly stateType = ATNState.STAR_LOOP_BACK;
 }

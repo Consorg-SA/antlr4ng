@@ -32,7 +32,7 @@ export class XPathTokenElement extends XPathElement {
         return nodes;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         const inv: string = this.invert ? "!" : "";
 
         return "XPathTokenElement[" + inv + this.nodeName + "]";

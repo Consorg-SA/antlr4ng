@@ -15,7 +15,7 @@ import { PlusLoopbackState } from "./PlusLoopbackState";
  * real decision-making note for `A+`
  */
 export class PlusBlockStartState extends BlockStartState {
-    public static override readonly stateType = ATNState.PLUS_BLOCK_START;
+    public static /*override*/ readonly stateType = ATNState.PLUS_BLOCK_START;
 
     public loopBackState: PlusLoopbackState;
 }

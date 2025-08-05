@@ -27,7 +27,7 @@ export class InterpreterRuleContext extends ParserRuleContext {
         this.#ruleIndex = ruleIndex;
     }
 
-    public override get ruleIndex(): number {
-        return this.#ruleIndex;
+    public /*override*/ get ruleIndex(): number {
+        return this._ruleIndex;
     }
 }

@@ -52,7 +52,7 @@ export class SingletonPredictionContext extends PredictionContext {
         return this.parent.equals(other.parent);
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         const up = this.parent === null ? "" : this.parent.toString();
         if (up.length === 0) {
             if (this.returnState === PredictionContext.EMPTY_RETURN_STATE) {

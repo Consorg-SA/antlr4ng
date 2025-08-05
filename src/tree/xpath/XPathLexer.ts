@@ -60,7 +60,7 @@ export class XPathLexer extends Lexer {
 
     public get modeNames(): string[] { return XPathLexer.modeNames; }
 
-    public override action(localContext: ParserRuleContext, ruleIndex: number, actionIndex: number): void {
+    public /*override*/ action(localContext: ParserRuleContext, ruleIndex: number, actionIndex: number): void {
         switch (ruleIndex) {
             case 4:
                 this.ID_action(localContext, actionIndex);
@@ -360,7 +360,7 @@ export class XPathLexer extends Lexer {
 
     private static readonly vocabulary = new Vocabulary(XPathLexer.literalNames, XPathLexer.symbolicNames, []);
 
-    public override get vocabulary(): Vocabulary {
+    public /*override*/ get vocabulary(): Vocabulary {
         return XPathLexer.vocabulary;
     }
 

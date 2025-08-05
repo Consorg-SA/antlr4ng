@@ -7,5 +7,5 @@
 import { ATNState } from "./ATNState";
 
 export class BasicState extends ATNState {
-    public static override readonly stateType = ATNState.BASIC;
+    public static /*override*/ readonly stateType = ATNState.BASIC;
 }

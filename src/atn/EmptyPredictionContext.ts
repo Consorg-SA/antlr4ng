@@ -18,23 +18,23 @@ export class EmptyPredictionContext extends SingletonPredictionContext {
         super(undefined, PredictionContext.EMPTY_RETURN_STATE);
     }
 
-    public override isEmpty(): boolean {
+    public /*override*/ isEmpty(): boolean {
         return true;
     }
 
-    public override getParent(): PredictionContext | null {
+    public /*override*/ getParent(): PredictionContext | null {
         return null;
     }
 
-    public override getReturnState(): number {
+    public /*override*/ getReturnState(): number {
         return this.returnState;
     }
 
-    public override equals(other: unknown): boolean {
+    public /*override*/ equals(other: unknown): boolean {
         return this === other;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return "$";
     }
 }

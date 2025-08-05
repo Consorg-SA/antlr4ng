@@ -568,7 +568,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
         return null;
     }
 
-    public override precpred(_localctx: ParserRuleContext | null, precedence: number): boolean {
+    public /*override*/ precpred(_localctx: ParserRuleContext | null, precedence: number): boolean {
         return precedence >= this.precedenceStack[this.precedenceStack.length - 1];
     }
 
@@ -698,7 +698,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
         return this.inputStream.getSourceName();
     }
 
-    public override getParseInfo(): ParseInfo | undefined {
+    public /*override*/ getParseInfo(): ParseInfo | undefined {
         const interp = this.interpreter;
         if (interp instanceof ProfilingATNSimulator) {
             return new ParseInfo(interp);

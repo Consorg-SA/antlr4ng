@@ -11,5 +11,5 @@ import { DecisionState } from "./DecisionState";
  * The Tokens rule start state linking to each lexer rule start state
  */
 export class TokensStartState extends DecisionState {
-    public static override readonly stateType = ATNState.TOKEN_START;
+    public static /*override*/ readonly stateType = ATNState.TOKEN_START;
 }

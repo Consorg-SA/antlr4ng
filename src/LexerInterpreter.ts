@@ -48,7 +48,7 @@ export class LexerInterpreter extends Lexer {
         this.interpreter = new LexerATNSimulator(this, atn, this.decisionToDFA, this.sharedContextCache);
     }
 
-    public override get atn(): ATN {
+    public /*override*/ get atn(): ATN {
         return this.#atn;
     }
 

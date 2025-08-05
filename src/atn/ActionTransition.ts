@@ -19,7 +19,7 @@ export class ActionTransition extends Transition {
         this.isCtxDependent = isCtxDependent ?? false; // e.g., $i ref in pred
     }
 
-    public override get isEpsilon(): boolean {
+    public /*override*/ get isEpsilon(): boolean {
         return true;
     }
 
@@ -31,7 +31,7 @@ export class ActionTransition extends Transition {
         return false;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return "action_" + this.ruleIndex + ":" + this.actionIndex;
     }
 }

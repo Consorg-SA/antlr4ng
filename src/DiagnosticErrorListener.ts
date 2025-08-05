@@ -54,7 +54,7 @@ export class DiagnosticErrorListener extends BaseErrorListener {
         this.exactOnly = exactOnly ?? true;
     }
 
-    public override reportAmbiguity = (recognizer: Parser,
+    public /*override*/ reportAmbiguity = (recognizer: Parser,
         dfa: DFA,
         startIndex: number,
         stopIndex: number,
@@ -72,7 +72,7 @@ export class DiagnosticErrorListener extends BaseErrorListener {
         recognizer.notifyErrorListeners(message, null, null);
     };
 
-    public override reportAttemptingFullContext = (recognizer: Parser,
+    public /*override*/ reportAttemptingFullContext = (recognizer: Parser,
         dfa: DFA,
         startIndex: number,
         stopIndex: number,
@@ -84,7 +84,7 @@ export class DiagnosticErrorListener extends BaseErrorListener {
         recognizer.notifyErrorListeners(message, null, null);
     };
 
-    public override reportContextSensitivity = (recognizer: Parser,
+    public /*override*/ reportContextSensitivity = (recognizer: Parser,
         dfa: DFA,
         startIndex: number,
         stopIndex: number,

@@ -23,7 +23,7 @@ export class XPathWildcardAnywhereElement extends XPathElement {
         return Trees.descendants(t);
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         const inv: string = this.invert ? "!" : "";
 
         return "XPathWildcardAnywhereElement[" + inv + this.nodeName + "]";

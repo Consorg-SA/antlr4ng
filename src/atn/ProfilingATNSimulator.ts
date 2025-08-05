@@ -51,7 +51,7 @@ export class ProfilingATNSimulator extends ParserATNSimulator {
         }
     }
 
-    public override adaptivePredict(input: TokenStream, decision: number, outerContext: ParserRuleContext): number {
+    public /*override*/ adaptivePredict(input: TokenStream, decision: number, outerContext: ParserRuleContext): number {
         try {
             this.sllStopIndex = -1;
             this.llStopIndex = -1;
@@ -113,7 +113,7 @@ export class ProfilingATNSimulator extends ParserATNSimulator {
         }
     }
 
-    public override getExistingTargetState(previousD: DFAState, t: number): DFAState | undefined {
+    public /*override*/ getExistingTargetState(previousD: DFAState, t: number): DFAState | undefined {
         // This method is called after each time the input position advances during SLL prediction.
         this.sllStopIndex = this.predictionState!.input!.index;
 
@@ -138,14 +138,14 @@ export class ProfilingATNSimulator extends ParserATNSimulator {
         return existingTargetState;
     }
 
-    public override computeTargetState(dfa: DFA, previousD: DFAState, t: number): DFAState {
+    public /*override*/ computeTargetState(dfa: DFA, previousD: DFAState, t: number): DFAState {
         const state = super.computeTargetState(dfa, previousD, t);
         this.currentState = state;
 
         return state;
     }
 
-    public override computeReachSet(closure: ATNConfigSet, t: number, fullCtx: boolean): ATNConfigSet | null {
+    public /*override*/ computeReachSet(closure: ATNConfigSet, t: number, fullCtx: boolean): ATNConfigSet | null {
         if (fullCtx && this.predictionState?.input) {
             this.llStopIndex = this.predictionState.input.index;
         }
@@ -183,7 +183,7 @@ export class ProfilingATNSimulator extends ParserATNSimulator {
         return reachConfigs;
     }
 
-    public override reportAttemptingFullContext(dfa: DFA, conflictingAlts: BitSet | null, configs: ATNConfigSet,
+    public /*override*/ reportAttemptingFullContext(dfa: DFA, conflictingAlts: BitSet | null, configs: ATNConfigSet,
         startIndex: number, stopIndex: number): void {
         if (conflictingAlts !== null) {
             this.conflictingAltResolvedBySLL = conflictingAlts.nextSetBit(0);
@@ -197,7 +197,7 @@ export class ProfilingATNSimulator extends ParserATNSimulator {
         }
     }
 
-    public override reportContextSensitivity(dfa: DFA, prediction: number, configs: ATNConfigSet, startIndex: number,
+    public /*override*/ reportContextSensitivity(dfa: DFA, prediction: number, configs: ATNConfigSet, startIndex: number,
         stopIndex: number): void {
         if (prediction !== this.conflictingAltResolvedBySLL && this.predictionState!.input) {
             this.decisions[this.currentDecision].contextSensitivities.push({
@@ -213,7 +213,7 @@ export class ProfilingATNSimulator extends ParserATNSimulator {
         super.reportContextSensitivity(dfa, prediction, configs, startIndex, stopIndex);
     }
 
-    public override reportAmbiguity(dfa: DFA, state: DFAState, startIndex: number, stopIndex: number, exact: boolean,
+    public /*override*/ reportAmbiguity(dfa: DFA, state: DFAState, startIndex: number, stopIndex: number, exact: boolean,
         ambigAlts: BitSet | undefined, configs: ATNConfigSet): void {
         let prediction: number | undefined;
 

@@ -26,15 +26,15 @@ export class SetTransition extends Transition {
         return Transition.SET;
     }
 
-    public override get label(): IntervalSet {
+    public /*override*/ get label(): IntervalSet {
         return this.set;
     }
 
-    public override matches(symbol: number, _minVocabSymbol: number, _maxVocabSymbol: number): boolean {
+    public /*override*/ matches(symbol: number, _minVocabSymbol: number, _maxVocabSymbol: number): boolean {
         return this.set.contains(symbol);
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return this.set.toString();
     }
 }

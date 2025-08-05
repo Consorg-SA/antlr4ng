@@ -23,7 +23,7 @@ export class LexerNoViableAltException extends RecognitionException {
         this.deadEndConfigs = deadEndConfigs;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         let symbol = "";
         if (this.input && this.startIndex >= 0 && this.startIndex < this.input.size) {
             symbol = this.input.getTextFromRange(this.startIndex, this.startIndex);

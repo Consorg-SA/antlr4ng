@@ -308,7 +308,7 @@ export class ParserATNSimulator extends ATNSimulator {
         // no-op, descendants can override
     }
 
-    public override clearDFA(): void {
+    public /*override*/ clearDFA(): void {
         for (let d = 0; d < this.decisionToDFA.length; d++) {
             this.decisionToDFA[d] = new DFA(this.atn.getDecisionState(d), d);
         }

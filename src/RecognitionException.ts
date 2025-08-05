@@ -83,7 +83,7 @@ export class RecognitionException extends Error {
     }
 
     // If the state number is not known, this method returns -1.
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return this.message;
     }
 }

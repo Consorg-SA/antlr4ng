@@ -21,7 +21,7 @@ export class RangeTransition extends Transition {
         this.#label.addRange(start, stop);
     }
 
-    public override get label(): IntervalSet {
+    public /*override*/ get label(): IntervalSet {
         return this.#label;
     }
 
@@ -33,7 +33,7 @@ export class RangeTransition extends Transition {
         return symbol >= this.start && symbol <= this.stop;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return "'" + String.fromCharCode(this.start) + "'..'" + String.fromCharCode(this.stop) + "'";
     }
 }

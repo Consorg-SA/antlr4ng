@@ -43,7 +43,7 @@ export class BailErrorStrategy extends DefaultErrorStrategy {
      * rule function catches. Use {@link Exception//getCause()} to get the
      * original {@link RecognitionException}.
      */
-    public override recover(recognizer: Parser, e: RecognitionException): void {
+    public /*override*/ recover(recognizer: Parser, e: RecognitionException): void {
         throw new ParseCancellationException(e);
     }
 
@@ -51,14 +51,14 @@ export class BailErrorStrategy extends DefaultErrorStrategy {
      * Make sure we don't attempt to recover inline; if the parser
      * successfully recovers, it won't throw an exception.
      */
-    public override recoverInline(recognizer: Parser): never {
+    public /*override*/ recoverInline(recognizer: Parser): never {
         const exception = new InputMismatchException(recognizer);
 
         throw new ParseCancellationException(exception);
     }
 
     // Make sure we don't attempt to recover from problems in subrules.
-    public override sync(_recognizer: Parser): void {
+    public /*override*/ sync(_recognizer: Parser): void {
         // pass
     }
 }

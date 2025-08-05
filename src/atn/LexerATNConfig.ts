@@ -35,13 +35,13 @@ export class LexerATNConfig extends ATNConfig {
         return new LexerATNConfig(config, state, config.context, lexerActionExecutor);
     }
 
-    public static override createWithConfig(state: ATNState, config: LexerATNConfig,
+    public static /*override*/ createWithConfig(state: ATNState, config: LexerATNConfig,
         context?: PredictionContext): LexerATNConfig {
 
         return new LexerATNConfig(config, state, context ?? null, config.lexerActionExecutor);
     }
 
-    public static override createWithContext(state: ATNState, alt: number, context: PredictionContext): LexerATNConfig {
+    public static /*override*/ createWithContext(state: ATNState, alt: number, context: PredictionContext): LexerATNConfig {
         return new LexerATNConfig({ alt }, state, context, null);
     }
 
@@ -50,7 +50,7 @@ export class LexerATNConfig extends ATNConfig {
             (("nonGreedy" in target) && (target as DecisionState).nonGreedy);
     }
 
-    public override hashCode(): number {
+    public /*override*/ hashCode(): number {
         if (this.cachedHashCode === undefined) {
             let hashCode = MurmurHash.initialize(7);
             hashCode = MurmurHash.update(hashCode, this.state.stateNumber);
@@ -66,7 +66,7 @@ export class LexerATNConfig extends ATNConfig {
         return this.cachedHashCode;
     }
 
-    public override equals(other: LexerATNConfig): boolean {
+    public /*override*/ equals(other: LexerATNConfig): boolean {
         if (this === other) {
             return true;
         }

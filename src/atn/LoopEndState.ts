@@ -10,7 +10,7 @@ import { ATNState } from "./ATNState";
  * Mark the end of a * or + loop
  */
 export class LoopEndState extends ATNState {
-    public static override readonly stateType = ATNState.LOOP_END;
+    public static /*override*/ readonly stateType = ATNState.LOOP_END;
 
     public loopBackState?: ATNState;
 }

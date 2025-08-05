@@ -23,15 +23,15 @@ export class RuleTransition extends Transition {
         this.followState = followState;
     }
 
-    public override get isEpsilon(): boolean {
+    public /*override*/ get isEpsilon(): boolean {
         return true;
     }
 
-    public override get transitionType(): number {
+    public /*override*/ get transitionType(): number {
         return Transition.RULE;
     }
 
-    public override matches(_symbol: number, _minVocabSymbol: number, _maxVocabSymbol: number): boolean {
+    public /*override*/ matches(_symbol: number, _minVocabSymbol: number, _maxVocabSymbol: number): boolean {
         return false;
     }
 }

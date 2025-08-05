@@ -27,7 +27,7 @@ export class EpsilonTransition extends Transition {
         return this.#outermostPrecedenceReturn;
     }
 
-    public override get isEpsilon(): boolean {
+    public /*override*/ get isEpsilon(): boolean {
         return true;
     }
 
@@ -35,11 +35,11 @@ export class EpsilonTransition extends Transition {
         return Transition.EPSILON;
     }
 
-    public override matches(): boolean {
+    public /*override*/ matches(): boolean {
         return false;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return "epsilon";
     }
 }

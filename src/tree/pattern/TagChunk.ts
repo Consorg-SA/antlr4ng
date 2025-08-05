@@ -72,7 +72,7 @@ export class TagChunk extends Chunk {
      * are returned in the form `label:tag`, and unlabeled tags are
      * returned as just the tag name.
      */
-    public override toString(): string {
+    public /*override*/ toString(): string {
         if (this.label !== undefined) {
             return this.label + ":" + this.tag;
         }

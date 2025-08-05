@@ -78,14 +78,14 @@ export class ParserInterpreter extends Parser {
         this.interpreter = new ParserATNSimulator(this, atn, this.decisionToDFA, this.sharedContextCache);
     }
 
-    public override reset(): void {
+    public /*override*/ reset(): void {
         super.reset();
 
         this.overrideDecisionReached = false;
         this.overrideDecisionRoot = null;
     }
 
-    public override get atn(): ATN {
+    public /*override*/ get atn(): ATN {
         return this.#atn;
     }
 
@@ -172,7 +172,7 @@ export class ParserInterpreter extends Parser {
         return this.#overrideDecisionInputIndex;
     }
 
-    public override enterRecursionRule(localctx: ParserRuleContext, state: number, ruleIndex: number,
+    public /*override*/ enterRecursionRule(localctx: ParserRuleContext, state: number, ruleIndex: number,
         precedence: number): void {
         this.parentContextStack.push([this.context, localctx.invokingState]);
         super.enterRecursionRule(localctx, state, ruleIndex, precedence);

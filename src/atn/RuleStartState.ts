@@ -8,7 +8,7 @@ import { ATNState } from "./ATNState";
 import { RuleStopState } from "./RuleStopState";
 
 export class RuleStartState extends ATNState {
-    public static override readonly stateType = ATNState.RULE_START;
+    public static /*override*/ readonly stateType = ATNState.RULE_START;
 
     public stopState?: RuleStopState;
     public isLeftRecursiveRule: boolean = false;

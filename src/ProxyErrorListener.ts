@@ -21,28 +21,28 @@ export class ProxyErrorListener extends BaseErrorListener {
         return this;
     }
 
-    public override syntaxError<S extends Token, T extends ATNSimulator>(recognizer: Recognizer<T>,
+    public /*override*/ syntaxError<S extends Token, T extends ATNSimulator>(recognizer: Recognizer<T>,
         offendingSymbol: S | null, line: number, column: number, msg: string, e: RecognitionException | null): void {
         this.delegates.forEach((d) => {
             d.syntaxError(recognizer, offendingSymbol, line, column, msg, e);
         });
     }
 
-    public override reportAmbiguity(recognizer: Parser, dfa: DFA, startIndex: number, stopIndex: number, exact: boolean,
+    public /*override*/ reportAmbiguity(recognizer: Parser, dfa: DFA, startIndex: number, stopIndex: number, exact: boolean,
         ambigAlts: BitSet | undefined, configs: ATNConfigSet): void {
         this.delegates.forEach((d) => {
             d.reportAmbiguity(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs);
         });
     }
 
-    public override reportAttemptingFullContext(recognizer: Parser, dfa: DFA, startIndex: number, stopIndex: number,
+    public /*override*/ reportAttemptingFullContext(recognizer: Parser, dfa: DFA, startIndex: number, stopIndex: number,
         conflictingAlts: BitSet | undefined, configs: ATNConfigSet): void {
         this.delegates.forEach((d) => {
             d.reportAttemptingFullContext(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs);
         });
     }
 
-    public override reportContextSensitivity(recognizer: Parser, dfa: DFA, startIndex: number, stopIndex: number,
+    public /*override*/ reportContextSensitivity(recognizer: Parser, dfa: DFA, startIndex: number, stopIndex: number,
         prediction: number, configs: ATNConfigSet): void {
         this.delegates.forEach((d) => {
             d.reportContextSensitivity(recognizer, dfa, startIndex, stopIndex, prediction, configs);

@@ -7,15 +7,15 @@
 import { Transition } from "./Transition";
 
 export class WildcardTransition extends Transition {
-    public override get transitionType(): number {
+    public /*override*/ get transitionType(): number {
         return Transition.WILDCARD;
     }
 
-    public override matches(symbol: number, minVocabSymbol: number, maxVocabSymbol: number): boolean {
+    public /*override*/ matches(symbol: number, minVocabSymbol: number, maxVocabSymbol: number): boolean {
         return symbol >= minVocabSymbol && symbol <= maxVocabSymbol;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return ".";
     }
 }

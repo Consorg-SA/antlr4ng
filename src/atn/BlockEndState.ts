@@ -11,7 +11,7 @@ import { BlockStartState } from "./BlockStartState";
  * Terminal node of a simple `(a|b|c)` block.
  */
 export class BlockEndState extends ATNState {
-    public static override readonly stateType = ATNState.BLOCK_END;
+    public static /*override*/ readonly stateType = ATNState.BLOCK_END;
 
     public startState?: BlockStartState;
 }

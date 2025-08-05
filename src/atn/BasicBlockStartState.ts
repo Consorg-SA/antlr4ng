@@ -8,5 +8,5 @@ import { ATNState } from "./ATNState";
 import { BlockStartState } from "./BlockStartState";
 
 export class BasicBlockStartState extends BlockStartState {
-    public static override readonly stateType = ATNState.BLOCK_START;
+    public static /*override*/ readonly stateType = ATNState.BLOCK_START;
 }

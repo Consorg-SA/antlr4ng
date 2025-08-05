@@ -17,7 +17,7 @@ export class PrecedencePredicateTransition extends AbstractPredicateTransition {
         this.precedence = precedence;
     }
 
-    public override get isEpsilon(): boolean {
+    public /*override*/ get isEpsilon(): boolean {
         return true;
     }
 
@@ -33,7 +33,7 @@ export class PrecedencePredicateTransition extends AbstractPredicateTransition {
         return Transition.PRECEDENCE;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return this.precedence + " >= _p";
     }
 }

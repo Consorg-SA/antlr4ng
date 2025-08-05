@@ -13,7 +13,7 @@ export class LexerDFASerializer extends DFASerializer {
         super(dfa, Vocabulary.EMPTY_VOCABULARY);
     }
 
-    public override getEdgeLabel = (i: number): string => {
+    public /*override*/ getEdgeLabel = (i: number): string => {
         return "'" + String.fromCharCode(i) + "'";
     };
 }

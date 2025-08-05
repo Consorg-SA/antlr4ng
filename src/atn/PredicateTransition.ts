@@ -21,7 +21,7 @@ export class PredicateTransition extends AbstractPredicateTransition {
         this.isCtxDependent = isCtxDependent; // e.g., $i ref in pred
     }
 
-    public override get isEpsilon(): boolean {
+    public /*override*/ get isEpsilon(): boolean {
         return true;
     }
 
@@ -37,7 +37,7 @@ export class PredicateTransition extends AbstractPredicateTransition {
         return new SemanticContext.Predicate(this.ruleIndex, this.predIndex, this.isCtxDependent);
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return "pred_" + this.ruleIndex + ":" + this.predIndex;
     }
 }

@@ -13,16 +13,16 @@ import { HashMap } from "./HashMap";
 export class OrderedHashMap<K extends IComparable, V> extends HashMap<K, V> {
     #keys: K[] = [];
 
-    public override clear(): void {
+    public /*override*/ clear(): void {
         super.clear();
         this.#keys = [];
     }
 
-    public override get(key: K): V | undefined {
+    public /*override*/ get(key: K): V | undefined {
         return super.get(key);
     }
 
-    public override set(key: K, value: V): V | undefined {
+    public /*override*/ set(key: K, value: V): V | undefined {
         const result = super.set(key, value);
         if (result === undefined) { // The key did not exist yet.
             this.#keys.push(key);
@@ -31,7 +31,7 @@ export class OrderedHashMap<K extends IComparable, V> extends HashMap<K, V> {
         return result;
     }
 
-    public override setIfAbsent(key: K, value: V): V | undefined {
+    public /*override*/ setIfAbsent(key: K, value: V): V | undefined {
         const result = super.setIfAbsent(key, value);
         if (result === undefined) { // The key did not exist yet.
             this.#keys.push(key);
@@ -43,7 +43,7 @@ export class OrderedHashMap<K extends IComparable, V> extends HashMap<K, V> {
     /**
      * @returns an iterable of the values in the map, in the order they were inserted.
      */
-    public override values(): Iterable<V> {
+    public /*override*/ values(): Iterable<V> {
         return {
             [Symbol.iterator]: () => {
                 let index = 0;
@@ -70,11 +70,11 @@ export class OrderedHashMap<K extends IComparable, V> extends HashMap<K, V> {
     /**
      * @returns an iterable of the keys in the map, in the order they were inserted.
      */
-    public override keys(): IterableIterator<K> {
+    public /*override*/ keys(): IterableIterator<K> {
         return this.#keys[Symbol.iterator]();
     }
 
-    public override equals(o: unknown): boolean {
+    public /*override*/ equals(o: unknown): boolean {
         if (!(o instanceof OrderedHashMap)) {
             return false;
         }

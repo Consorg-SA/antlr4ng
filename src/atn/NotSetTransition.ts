@@ -8,16 +8,16 @@ import { SetTransition } from "./SetTransition";
 import { Transition } from "./Transition";
 
 export class NotSetTransition extends SetTransition {
-    public override get transitionType(): number {
+    public /*override*/ get transitionType(): number {
         return Transition.NOT_SET;
     }
 
-    public override matches(symbol: number, minVocabSymbol: number, maxVocabSymbol: number): boolean {
+    public /*override*/ matches(symbol: number, minVocabSymbol: number, maxVocabSymbol: number): boolean {
         return symbol >= minVocabSymbol && symbol <= maxVocabSymbol &&
             !super.matches(symbol, minVocabSymbol, maxVocabSymbol);
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return "~" + super.toString();
     }
 }

@@ -11,7 +11,7 @@ import { ATNSimulator } from "../../atn/ATNSimulator";
 import { BaseErrorListener } from "../../BaseErrorListener";
 
 export class XPathLexerErrorListener extends BaseErrorListener {
-    public override syntaxError<S extends Token, T extends ATNSimulator>(_recognizer: Recognizer<T>,
+    public /*override*/ syntaxError<S extends Token, T extends ATNSimulator>(_recognizer: Recognizer<T>,
         _offendingSymbol: S | null,
         _line: number,
         _charPositionInLine: number,

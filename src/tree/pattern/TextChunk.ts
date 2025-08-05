@@ -27,7 +27,7 @@ export class TextChunk extends Chunk {
     /**
      * @returns the result of {@link #getText()} in single quotes.
      */
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return "'" + this.text + "'";
     }
 }

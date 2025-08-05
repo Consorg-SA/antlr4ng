@@ -159,7 +159,7 @@ class AND extends SemanticContext {
         this.operands = operands.toArray();
     }
 
-    public override equals(other: AND): boolean {
+    public /*override*/ equals(other: AND): boolean {
         if (this === other) {
             return true;
         }
@@ -202,7 +202,7 @@ class AND extends SemanticContext {
         return true;
     }
 
-    public override evalPrecedence<T extends ATNSimulator>(parser: Recognizer<T>,
+    public /*override*/ evalPrecedence<T extends ATNSimulator>(parser: Recognizer<T>,
         parserCallStack: ParserRuleContext): SemanticContext | null {
         let differs = false;
         const operands = [];
@@ -234,7 +234,7 @@ class AND extends SemanticContext {
         return result;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         const s = this.operands.map((o) => { return o.toString(); });
 
         return (s.length > 3 ? s.slice(3) : s).join("&&");
@@ -279,7 +279,7 @@ class OR extends SemanticContext {
         this.operands = operands.toArray();
     }
 
-    public override equals(other: unknown): boolean {
+    public /*override*/ equals(other: unknown): boolean {
         if (this === other) {
             return true;
         } else if (!(other instanceof OR)) {
@@ -316,7 +316,7 @@ class OR extends SemanticContext {
         return false;
     }
 
-    public override evalPrecedence<T extends ATNSimulator>(parser: Recognizer<T>,
+    public /*override*/ evalPrecedence<T extends ATNSimulator>(parser: Recognizer<T>,
         parserCallStack: ParserRuleContext): SemanticContext | null {
         let differs = false;
         const operands = [];
@@ -349,7 +349,7 @@ class OR extends SemanticContext {
         return result;
     }
 
-    public override toString() {
+    public /*override*/ toString() {
         const s = this.operands.map((o) => { return o.toString(); });
 
         return (s.length > 3 ? s.slice(3) : s).join("||");
@@ -369,14 +369,14 @@ export namespace SemanticContext {
             this.isCtxDependent = isCtxDependent ?? false;
         }
 
-        public override evaluate<T extends ATNSimulator>(parser: Recognizer<T>,
+        public /*override*/ evaluate<T extends ATNSimulator>(parser: Recognizer<T>,
             outerContext: ParserRuleContext): boolean {
             const localctx = this.isCtxDependent ? outerContext : null;
 
             return parser.sempred(localctx, this.ruleIndex, this.predIndex);
         }
 
-        public override hashCode(): number {
+        public /*override*/ hashCode(): number {
             if (this.cachedHashCode === undefined) {
                 let hashCode = MurmurHash.initialize();
                 hashCode = MurmurHash.update(hashCode, this.ruleIndex);
@@ -389,7 +389,7 @@ export namespace SemanticContext {
             return this.cachedHashCode;
         }
 
-        public override equals(other: Predicate): boolean {
+        public /*override*/ equals(other: Predicate): boolean {
             if (this === other) {
                 return true;
             }
@@ -399,7 +399,7 @@ export namespace SemanticContext {
                 this.isCtxDependent === other.isCtxDependent;
         }
 
-        public override toString(): string {
+        public /*override*/ toString(): string {
             return "{" + this.ruleIndex + ":" + this.predIndex + "}?";
         }
     }
@@ -412,12 +412,12 @@ export namespace SemanticContext {
             this.precedence = precedence ?? 0;
         }
 
-        public override evaluate<T extends ATNSimulator>(parser: Recognizer<T>,
+        public /*override*/ evaluate<T extends ATNSimulator>(parser: Recognizer<T>,
             outerContext: ParserRuleContext): boolean {
             return parser.precpred(outerContext, this.precedence);
         }
 
-        public override evalPrecedence(parser: Recognizer<ATNSimulator>,
+        public /*override*/ evalPrecedence(parser: Recognizer<ATNSimulator>,
             outerContext?: ParserRuleContext): SemanticContext | null {
             if (parser.precpred(outerContext ?? null, this.precedence)) {
                 return SemanticContext.NONE;
@@ -430,11 +430,11 @@ export namespace SemanticContext {
             return this.precedence - other.precedence;
         }
 
-        public override hashCode(): number {
+        public /*override*/ hashCode(): number {
             return 31 + this.precedence;
         }
 
-        public override equals(other: PrecedencePredicate): boolean {
+        public /*override*/ equals(other: PrecedencePredicate): boolean {
             if (this === other) {
                 return true;
             }
@@ -442,7 +442,7 @@ export namespace SemanticContext {
             return this.precedence === other.precedence;
         }
 
-        public override toString(): string {
+        public /*override*/ toString(): string {
             return "{" + this.precedence + ">=prec}?";
         }
 

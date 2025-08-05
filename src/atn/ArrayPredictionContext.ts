@@ -59,7 +59,7 @@ export class ArrayPredictionContext extends PredictionContext {
 
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         if (this.isEmpty()) {
             return "[]";
         }

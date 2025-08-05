@@ -20,19 +20,19 @@ export class AtomTransition extends Transition {
         this.#label = IntervalSet.of(label, label);
     }
 
-    public override get label(): IntervalSet {
-        return this.#label;
+    public /*override*/ get label(): IntervalSet {
+        return this._label;
     }
 
-    public override get transitionType(): number {
+    public /*override*/ get transitionType(): number {
         return Transition.ATOM;
     }
 
-    public override matches(symbol: number): boolean {
+    public /*override*/ matches(symbol: number): boolean {
         return this.labelValue === symbol;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         return this.labelValue.toString();
     }
 }

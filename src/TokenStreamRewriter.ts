@@ -434,7 +434,7 @@ class InsertBeforeOp extends RewriteOperation {
     /**
      * @returns the index of the next token to operate on
      */
-    public override execute(buf: string[]): number {
+    public /*override*/ execute(buf: string[]): number {
         if (this.text) {
             buf.push(this.text.toString());
         }
@@ -446,7 +446,7 @@ class InsertBeforeOp extends RewriteOperation {
         return this.index + 1;
     }
 
-    public override toString() {
+    public /*override*/ toString() {
         return "<InsertBeforeOp@" + this.tokens.get(this.index) +
             ":\"" + this.text + "\">";
     }
@@ -457,7 +457,7 @@ class InsertAfterOp extends InsertBeforeOp {
         super(tokens, index + 1, instructionIndex, text); // insert after is insert before index+1
     }
 
-    public override toString() {
+    public /*override*/ toString() {
         return "<InsertAfterOp@" + this.tokens.get(this.index) +
             ":\"" + this.text + "\">";
     }
@@ -482,7 +482,7 @@ class ReplaceOp extends RewriteOperation {
         return this.lastIndex + 1;
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         if (this.text == null) {
             return "<DeleteOp@" + this.tokens.get(this.index) +
                 ".." + this.tokens.get(this.lastIndex) + ">";

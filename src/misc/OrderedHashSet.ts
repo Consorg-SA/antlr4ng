@@ -10,7 +10,7 @@ import { HashSet } from "./HashSet";
 export class OrderedHashSet<T extends IComparable> extends HashSet<T> {
     private elements: T[] = [];
 
-    public override getOrAdd(o: T): T {
+    public /*override*/ getOrAdd(o: T): T {
         const oldSize = this.size;
         const result = super.getOrAdd(o);
         if (this.size > oldSize) {
@@ -20,7 +20,7 @@ export class OrderedHashSet<T extends IComparable> extends HashSet<T> {
         return result;
     }
 
-    public override equals(o: unknown): boolean {
+    public /*override*/ equals(o: unknown): boolean {
         if (!(o instanceof OrderedHashSet)) {
             return false;
         }
@@ -28,16 +28,16 @@ export class OrderedHashSet<T extends IComparable> extends HashSet<T> {
         return super.equals(o);
     }
 
-    public override clear(): void {
+    public /*override*/ clear(): void {
         super.clear();
         this.elements = [];
     }
 
-    public override *[Symbol.iterator](): IterableIterator<T> {
+    public /*override*/ *[Symbol.iterator](): IterableIterator<T> {
         yield* this.elements;
     }
 
-    public override toArray(): T[] {
+    public /*override*/ toArray(): T[] {
         return this.elements.slice(0);
     }
 }

@@ -23,7 +23,7 @@ export class ConsoleErrorListener extends BaseErrorListener {
      */
     public static readonly instance = new ConsoleErrorListener();
 
-    public override syntaxError<T extends ATNSimulator>(recognizer: Recognizer<T> | null,
+    public /*override*/ syntaxError<T extends ATNSimulator>(recognizer: Recognizer<T> | null,
         offendingSymbol: unknown,
         line: number,
         charPositionInLine: number,

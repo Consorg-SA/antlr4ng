@@ -20,7 +20,7 @@ export class XPathTokenAnywhereElement extends XPathElement {
         return Trees.findAllTokenNodes(t, this.tokenType);
     }
 
-    public override toString(): string {
+    public /*override*/ toString(): string {
         const inv: string = this.invert ? "!" : "";
 
         return "XPathTokenAnywhereElement[" + inv + this.nodeName + "]";

@@ -15,7 +15,7 @@ import { TerminalNode } from "./TerminalNode";
  * upon no viable alternative exceptions.
  */
 export class ErrorNode extends TerminalNode {
-    public override accept<T>(visitor: ParseTreeVisitor<T>): T | null {
+    public /*override*/ accept<T>(visitor: ParseTreeVisitor<T>): T | null {
         return visitor.visitErrorNode(this);
     }
 }
