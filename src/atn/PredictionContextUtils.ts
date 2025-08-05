@@ -6,19 +6,19 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param */
 
-import { HashMap } from "../misc/HashMap.js";
+import { HashMap } from "../misc/HashMap";
 
-import { ParserRuleContext } from "../ParserRuleContext.js";
-import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator.js";
-import { DoubleDict } from "../utils/DoubleDict.js";
-import { ATN } from "./ATN.js";
-import { ArrayPredictionContext } from "./ArrayPredictionContext.js";
-import { EmptyPredictionContext } from "./EmptyPredictionContext.js";
-import { PredictionContext } from "./PredictionContext.js";
-import { PredictionContextCache } from "./PredictionContextCache.js";
-import { RuleTransition } from "./RuleTransition.js";
-import { SingletonPredictionContext } from "./SingletonPredictionContext.js";
-import { createSingletonPredictionContext } from "./helpers.js";
+import { ParserRuleContext } from "../ParserRuleContext";
+import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator";
+import { DoubleDict } from "../utils/DoubleDict";
+import { ATN } from "./ATN";
+import { ArrayPredictionContext } from "./ArrayPredictionContext";
+import { EmptyPredictionContext } from "./EmptyPredictionContext";
+import { PredictionContext } from "./PredictionContext";
+import { PredictionContextCache } from "./PredictionContextCache";
+import { RuleTransition } from "./RuleTransition";
+import { SingletonPredictionContext } from "./SingletonPredictionContext";
+import { createSingletonPredictionContext } from "./helpers";
 
 /**
  * Convert a {@link RuleContext} tree to a {@link PredictionContext} graph.

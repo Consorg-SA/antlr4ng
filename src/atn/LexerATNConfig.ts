@@ -4,13 +4,13 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { DecisionState } from "./DecisionState.js";
-import { ATNConfig } from "./ATNConfig.js";
-import { LexerActionExecutor } from "./LexerActionExecutor.js";
-import { ATNState } from "./ATNState.js";
-import { PredictionContext } from "./PredictionContext.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
-import { SemanticContext } from "./index.js";
+import { DecisionState } from "./DecisionState";
+import { ATNConfig } from "./ATNConfig";
+import { LexerActionExecutor } from "./LexerActionExecutor";
+import { ATNState } from "./ATNState";
+import { PredictionContext } from "./PredictionContext";
+import { MurmurHash } from "../utils/MurmurHash";
+import { SemanticContext } from "./index";
 
 export class LexerATNConfig extends ATNConfig {
     /**

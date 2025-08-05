@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { MurmurHash } from "../utils/MurmurHash.js";
-import { DefaultEqualityComparator } from "./DefaultEqualityComparator.js";
-import { EqualityComparator } from "./EqualityComparator.js";
+import { MurmurHash } from "../utils/MurmurHash";
+import { DefaultEqualityComparator } from "./DefaultEqualityComparator";
+import { EqualityComparator } from "./EqualityComparator";
 
 export class HashSet<T> implements Iterable<T> {
     private static readonly defaultLoadFactor = 0.75;

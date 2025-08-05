@@ -6,14 +6,14 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param, no-underscore-dangle */
 
-import { ParserRuleContext } from "../ParserRuleContext.js";
-import { TokenStream } from "../TokenStream.js";
-import { DFAState } from "../dfa/DFAState.js";
-import { Parser, DFA, BitSet } from "../index.js";
-import { ATNConfigSet } from "./ATNConfigSet.js";
-import { ATNSimulator } from "./ATNSimulator.js";
-import { DecisionInfo } from "./DecisionInfo.js";
-import { ParserATNSimulator } from "./ParserATNSimulator.js";
+import { ParserRuleContext } from "../ParserRuleContext";
+import { TokenStream } from "../TokenStream";
+import { DFAState } from "../dfa/DFAState";
+import { Parser, DFA, BitSet } from "../index";
+import { ATNConfigSet } from "./ATNConfigSet";
+import { ATNSimulator } from "./ATNSimulator";
+import { DecisionInfo } from "./DecisionInfo";
+import { ParserATNSimulator } from "./ParserATNSimulator";
 
 export class ProfilingATNSimulator extends ParserATNSimulator {
     protected readonly decisions: DecisionInfo[];

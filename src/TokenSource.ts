@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { type CharStream } from "./CharStream.js";
-import { type Token } from "./Token.js";
-import { type TokenFactory } from "./TokenFactory.js";
+import type { CharStream } from "./CharStream";
+import type { Token } from "./Token";
+import type { TokenFactory } from "./TokenFactory";
 
 /**
  * A source of tokens must provide a sequence of tokens via {@link nextToken()}

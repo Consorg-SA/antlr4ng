@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ParseTree } from "../ParseTree.js";
-import { Trees } from "../Trees.js";
-import { XPath } from "./XPath.js";
-import { XPathElement } from "./XPathElement.js";
+import { ParseTree } from "../ParseTree";
+import { Trees } from "../Trees";
+import { XPath } from "./XPath";
+import { XPathElement } from "./XPathElement";
 
 export class XPathWildcardAnywhereElement extends XPathElement {
     public constructor() {

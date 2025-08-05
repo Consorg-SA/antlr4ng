@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Lexer } from "../Lexer.js";
-import type { IComparable } from "../index.js";
+import { Lexer } from "../Lexer";
+import type { IComparable } from "../index";
 
 /**
  * Represents a single action which can be executed following the successful

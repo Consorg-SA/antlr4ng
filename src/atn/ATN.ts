@@ -6,17 +6,17 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param */
 
-import { LL1Analyzer } from "./LL1Analyzer.js";
-import { IntervalSet } from "../misc/IntervalSet.js";
-import { ATNState } from "./ATNState.js";
-import { DecisionState } from "./DecisionState.js";
-import { RuleStartState } from "./RuleStartState.js";
-import { RuleStopState } from "./RuleStopState.js";
-import { LexerAction } from "./LexerAction.js";
-import { TokensStartState } from "./TokensStartState.js";
-import { Token } from "../Token.js";
-import { RuleTransition } from "./RuleTransition.js";
-import type { ParserRuleContext } from "../ParserRuleContext.js";
+import { LL1Analyzer } from "./LL1Analyzer";
+import { IntervalSet } from "../misc/IntervalSet";
+import { ATNState } from "./ATNState";
+import { DecisionState } from "./DecisionState";
+import { RuleStartState } from "./RuleStartState";
+import { RuleStopState } from "./RuleStopState";
+import { LexerAction } from "./LexerAction";
+import { TokensStartState } from "./TokensStartState";
+import { Token } from "../Token";
+import { RuleTransition } from "./RuleTransition";
+import type { ParserRuleContext } from "../ParserRuleContext";
 
 export class ATN {
     public static INVALID_ALT_NUMBER = 0;

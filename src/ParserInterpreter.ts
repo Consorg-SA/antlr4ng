@@ -6,31 +6,31 @@
 
 /* eslint-disable no-underscore-dangle */
 
-import { ATNState } from "./atn/ATNState.js";
-import { BitSet } from "./misc/BitSet.js";
-import { FailedPredicateException } from "./FailedPredicateException.js";
-import { InputMismatchException } from "./InputMismatchException.js";
-import { InterpreterRuleContext } from "./InterpreterRuleContext.js";
-import { Parser } from "./Parser.js";
-import { ParserATNSimulator } from "./atn/ParserATNSimulator.js";
-import { RecognitionException } from "./RecognitionException.js";
-import { StarLoopEntryState } from "./atn/StarLoopEntryState.js";
-import { Token } from "./Token.js";
-import { DFA } from "./dfa/DFA.js";
-import { PredictionContextCache } from "./atn/PredictionContextCache.js";
-import { ATN } from "./atn/ATN.js";
-import { Vocabulary } from "./Vocabulary.js";
-import { TokenStream } from "./TokenStream.js";
-import { ParserRuleContext } from "./ParserRuleContext.js";
-import { RuleStartState } from "./atn/RuleStartState.js";
-import { RuleTransition } from "./atn/RuleTransition.js";
-import { PredicateTransition } from "./atn/PredicateTransition.js";
-import { ActionTransition } from "./atn/ActionTransition.js";
-import { PrecedencePredicateTransition } from "./atn/PrecedencePredicateTransition.js";
-import { DecisionState } from "./atn/DecisionState.js";
-import { TokenSource } from "./TokenSource.js";
-import { CharStream } from "./CharStream.js";
-import { Transition } from "./atn/Transition.js";
+import { ATNState } from "./atn/ATNState";
+import { BitSet } from "./misc/BitSet";
+import { FailedPredicateException } from "./FailedPredicateException";
+import { InputMismatchException } from "./InputMismatchException";
+import { InterpreterRuleContext } from "./InterpreterRuleContext";
+import { Parser } from "./Parser";
+import { ParserATNSimulator } from "./atn/ParserATNSimulator";
+import { RecognitionException } from "./RecognitionException";
+import { StarLoopEntryState } from "./atn/StarLoopEntryState";
+import { Token } from "./Token";
+import { DFA } from "./dfa/DFA";
+import { PredictionContextCache } from "./atn/PredictionContextCache";
+import { ATN } from "./atn/ATN";
+import { Vocabulary } from "./Vocabulary";
+import { TokenStream } from "./TokenStream";
+import { ParserRuleContext } from "./ParserRuleContext";
+import { RuleStartState } from "./atn/RuleStartState";
+import { RuleTransition } from "./atn/RuleTransition";
+import { PredicateTransition } from "./atn/PredicateTransition";
+import { ActionTransition } from "./atn/ActionTransition";
+import { PrecedencePredicateTransition } from "./atn/PrecedencePredicateTransition";
+import { DecisionState } from "./atn/DecisionState";
+import { TokenSource } from "./TokenSource";
+import { CharStream } from "./CharStream";
+import { Transition } from "./atn/Transition";
 
 export class ParserInterpreter extends Parser {
     public rootContext: InterpreterRuleContext;

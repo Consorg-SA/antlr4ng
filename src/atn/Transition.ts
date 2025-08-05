@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { IntervalSet } from "../misc/IntervalSet.js";
-import { ATNState } from "./ATNState.js";
+import { IntervalSet } from "../misc/IntervalSet";
+import { ATNState } from "./ATNState";
 
 /**
  * An ATN transition between any two ATN states.  Subclasses define

@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { HashMap } from "../misc/HashMap.js";
-import { IComparable } from "./helpers.js";
+import { HashMap } from "../misc/HashMap";
+import { IComparable } from "./helpers";
 
 export class DoubleDict<Key1 extends IComparable, Key2 extends IComparable, Value> {
     private readonly cacheMap: HashMap<Key1, HashMap<Key2, Value>>;

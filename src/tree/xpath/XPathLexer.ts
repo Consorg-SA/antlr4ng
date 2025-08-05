@@ -1,15 +1,15 @@
 // Generated from src/tree/xpath/XPathLexer.g4 by ANTLR 4.13.1
 
-import { CharStream } from "../../CharStream.js";
-import { Lexer } from "../../Lexer.js";
-import { ParserRuleContext } from "../../ParserRuleContext.js";
-import { Vocabulary } from "../../Vocabulary.js";
-import { ATN } from "../../atn/ATN.js";
-import { ATNDeserializer } from "../../atn/ATNDeserializer.js";
-import { DecisionState } from "../../atn/DecisionState.js";
-import { LexerATNSimulator } from "../../atn/LexerATNSimulator.js";
-import { PredictionContextCache } from "../../atn/PredictionContextCache.js";
-import { DFA } from "../../dfa/DFA.js";
+import { CharStream } from "../../CharStream";
+import { Lexer } from "../../Lexer";
+import { ParserRuleContext } from "../../ParserRuleContext";
+import { Vocabulary } from "../../Vocabulary";
+import { ATN } from "../../atn/ATN";
+import { ATNDeserializer } from "../../atn/ATNDeserializer";
+import { DecisionState } from "../../atn/DecisionState";
+import { LexerATNSimulator } from "../../atn/LexerATNSimulator";
+import { PredictionContextCache } from "../../atn/PredictionContextCache";
+import { DFA } from "../../dfa/DFA";
 
 export class XPathLexer extends Lexer {
     public static readonly TOKEN_REF = 1;

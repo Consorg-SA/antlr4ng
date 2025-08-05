@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Interval } from "../misc/Interval.js";
-import { Token } from "../Token.js";
-import { ParseTree } from "./ParseTree.js";
-import { type ParseTreeVisitor } from "./ParseTreeVisitor.js";
+import { Interval } from "../misc/Interval";
+import { Token } from "../Token";
+import { ParseTree } from "./ParseTree";
+import type { ParseTreeVisitor } from "./ParseTreeVisitor";
 
 export class TerminalNode implements ParseTree {
     public parent: ParseTree | null = null;

@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { EqualityComparator } from "../misc/EqualityComparator.js";
-import { DFAState } from "./index.js";
+import { EqualityComparator } from "../misc/EqualityComparator";
+import { DFAState } from "./index";
 
 /**
  * The comparator for DFA states.

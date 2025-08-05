@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import type { IComparable } from "../utils/helpers.js";
-import { EqualityComparator } from "./EqualityComparator.js";
+import type { IComparable } from "../utils/helpers";
+import { EqualityComparator } from "./EqualityComparator";
 
 /**
  * This default implementation of {@link EqualityComparator} uses object equality

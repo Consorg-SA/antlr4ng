@@ -4,7 +4,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { DecisionEventInfo } from "./DecisionEventInfo.js";
+import { DecisionEventInfo } from "./DecisionEventInfo";
 
 /**
  * This class represents profiling event information for a context sensitivity.

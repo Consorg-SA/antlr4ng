@@ -4,11 +4,11 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Recognizer } from "../../Recognizer.js";
-import { RecognitionException } from "../../RecognitionException.js";
-import { Token } from "../../Token.js";
-import { ATNSimulator } from "../../atn/ATNSimulator.js";
-import { BaseErrorListener } from "../../BaseErrorListener.js";
+import { Recognizer } from "../../Recognizer";
+import { RecognitionException } from "../../RecognitionException";
+import { Token } from "../../Token";
+import { ATNSimulator } from "../../atn/ATNSimulator";
+import { BaseErrorListener } from "../../BaseErrorListener";
 
 export class XPathLexerErrorListener extends BaseErrorListener {
     public override syntaxError<S extends Token, T extends ATNSimulator>(_recognizer: Recognizer<T>,

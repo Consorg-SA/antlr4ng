@@ -4,7 +4,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Transition } from "./Transition.js";
+import { Transition } from "./Transition";
 
 export class WildcardTransition extends Transition {
     public override get transitionType(): number {

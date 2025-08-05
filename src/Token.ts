@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { type CharStream } from "./CharStream.js";
-import { IntStream } from "./IntStream.js";
-import { type TokenSource } from "./TokenSource.js";
+import type { CharStream } from "./CharStream";
+import { IntStream } from "./IntStream";
+import type { TokenSource } from "./TokenSource";
 
 /* eslint-disable @typescript-eslint/naming-convention */
 

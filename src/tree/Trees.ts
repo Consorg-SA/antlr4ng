@@ -6,15 +6,15 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param */
 
-import { Token, isToken } from "../Token.js";
-import { ParserRuleContext } from "../ParserRuleContext.js";
+import { Token, isToken } from "../Token";
+import { ParserRuleContext } from "../ParserRuleContext";
 
-import { escapeWhitespace } from "../utils/helpers.js";
-import { ErrorNode } from "./ErrorNode.js";
-import { TerminalNode } from "./TerminalNode.js";
-import { ParseTree } from "./ParseTree.js";
-import { Parser } from "../Parser.js";
-import { CommonToken } from "../CommonToken.js";
+import { escapeWhitespace } from "../utils/helpers";
+import { ErrorNode } from "./ErrorNode";
+import { TerminalNode } from "./TerminalNode";
+import { ParseTree } from "./ParseTree";
+import { Parser } from "../Parser";
+import { CommonToken } from "../CommonToken";
 
 /** A set of utility routines useful for all kinds of ANTLR trees. */
 export class Trees {

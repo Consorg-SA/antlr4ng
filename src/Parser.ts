@@ -6,28 +6,28 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param */
 
-import { Token } from "./Token.js";
-import { TerminalNode } from "./tree/TerminalNode.js";
-import { ErrorNode } from "./tree/ErrorNode.js";
-import { Recognizer } from "./Recognizer.js";
-import { DefaultErrorStrategy } from "./DefaultErrorStrategy.js";
-import { ATNDeserializer } from "./atn/ATNDeserializer.js";
-import { ParserATNSimulator } from "./atn/ParserATNSimulator.js";
-import { TokenStream } from "./TokenStream.js";
-import { ParseTreeListener } from "./tree/ParseTreeListener.js";
-import { ParserRuleContext } from "./ParserRuleContext.js";
-import { TokenFactory } from "./TokenFactory.js";
-import { ATN } from "./atn/ATN.js";
-import { RecognitionException } from "./RecognitionException.js";
-import { RuleTransition } from "./atn/RuleTransition.js";
-import { IntervalSet } from "./misc/IntervalSet.js";
-import { TraceListener } from "./TraceListener.js";
-import { ProfilingATNSimulator } from "./atn/ProfilingATNSimulator.js";
-import type { IntStream } from "./IntStream.js";
-import type { ParseTreePattern } from "./tree/pattern/ParseTreePattern.js";
-import { Lexer } from "./Lexer.js";
-import { ParseTreePatternMatcher } from "./tree/pattern/ParseTreePatternMatcher.js";
-import { ParseInfo } from "./atn/ParseInfo.js";
+import { Token } from "./Token";
+import { TerminalNode } from "./tree/TerminalNode";
+import { ErrorNode } from "./tree/ErrorNode";
+import { Recognizer } from "./Recognizer";
+import { DefaultErrorStrategy } from "./DefaultErrorStrategy";
+import { ATNDeserializer } from "./atn/ATNDeserializer";
+import { ParserATNSimulator } from "./atn/ParserATNSimulator";
+import { TokenStream } from "./TokenStream";
+import { ParseTreeListener } from "./tree/ParseTreeListener";
+import { ParserRuleContext } from "./ParserRuleContext";
+import { TokenFactory } from "./TokenFactory";
+import { ATN } from "./atn/ATN";
+import { RecognitionException } from "./RecognitionException";
+import { RuleTransition } from "./atn/RuleTransition";
+import { IntervalSet } from "./misc/IntervalSet";
+import { TraceListener } from "./TraceListener";
+import { ProfilingATNSimulator } from "./atn/ProfilingATNSimulator";
+import type { IntStream } from "./IntStream";
+import type { ParseTreePattern } from "./tree/pattern/ParseTreePattern";
+import { Lexer } from "./Lexer";
+import { ParseTreePatternMatcher } from "./tree/pattern/ParseTreePatternMatcher";
+import { ParseInfo } from "./atn/ParseInfo";
 
 export interface IDebugPrinter {
     println(s: string): void;

@@ -4,13 +4,13 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { CharStream } from "./CharStream.js";
-import { ParserRuleContext } from "./ParserRuleContext.js";
-import { Recognizer } from "./Recognizer.js";
-import { Token } from "./Token.js";
-import { TokenStream } from "./TokenStream.js";
-import { ATNSimulator } from "./atn/ATNSimulator.js";
-import { IntervalSet } from "./misc/IntervalSet.js";
+import { CharStream } from "./CharStream";
+import { ParserRuleContext } from "./ParserRuleContext";
+import { Recognizer } from "./Recognizer";
+import { Token } from "./Token";
+import { TokenStream } from "./TokenStream";
+import { ATNSimulator } from "./atn/ATNSimulator";
+import { IntervalSet } from "./misc/IntervalSet";
 
 export interface IExceptionParams {
     message: string;

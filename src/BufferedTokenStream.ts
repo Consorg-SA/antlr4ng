@@ -7,13 +7,13 @@
 /* eslint-disable jsdoc/require-param, jsdoc/require-returns, @typescript-eslint/naming-convention */
 /* eslint-disable jsdoc/no-undefined-types */
 
-import { Token } from "./Token.js";
-import { Lexer } from "./Lexer.js";
-import { Interval } from "./misc/Interval.js";
-import { TokenStream } from "./TokenStream.js";
-import { TokenSource } from "./TokenSource.js";
-import { ParserRuleContext } from "./ParserRuleContext.js";
-import { isWritableToken } from "./WritableToken.js";
+import { Token } from "./Token";
+import { Lexer } from "./Lexer";
+import { Interval } from "./misc/Interval";
+import { TokenStream } from "./TokenStream";
+import { TokenSource } from "./TokenSource";
+import { ParserRuleContext } from "./ParserRuleContext";
+import { isWritableToken } from "./WritableToken";
 
 /**
  * This implementation of {@link TokenStream} loads tokens from a

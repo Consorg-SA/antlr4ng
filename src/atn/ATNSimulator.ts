@@ -4,13 +4,13 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { DFAState } from "../dfa/DFAState.js";
-import { getCachedPredictionContext } from "./PredictionContextUtils.js";
-import { ATN } from "./ATN.js";
-import { PredictionContextCache } from "./PredictionContextCache.js";
-import { PredictionContext } from "./PredictionContext.js";
-import { HashMap } from "../misc/HashMap.js";
-import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator.js";
+import { DFAState } from "../dfa/DFAState";
+import { getCachedPredictionContext } from "./PredictionContextUtils";
+import { ATN } from "./ATN";
+import { PredictionContextCache } from "./PredictionContextCache";
+import { PredictionContext } from "./PredictionContext";
+import { HashMap } from "../misc/HashMap";
+import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator";
 
 export abstract class ATNSimulator {
     /** Must distinguish between missing edge and edge we know leads nowhere */

@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ParseTree } from "../ParseTree.js";
-import { Trees } from "../Trees.js";
-import { XPathElement } from "./XPathElement.js";
+import { ParseTree } from "../ParseTree";
+import { Trees } from "../Trees";
+import { XPathElement } from "./XPathElement";
 
 /**
  * Either `ID` at start of path or `...//ID` in middle of path.

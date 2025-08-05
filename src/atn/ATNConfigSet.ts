@@ -6,20 +6,20 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param, max-classes-per-file */
 
-import { ATN } from "./ATN.js";
-import { SemanticContext } from "./SemanticContext.js";
-import { merge } from "./PredictionContextUtils.js";
+import { ATN } from "./ATN";
+import { SemanticContext } from "./SemanticContext";
+import { merge } from "./PredictionContextUtils";
 
-import { equalArrays, arrayToString } from "../utils/helpers.js";
-import { ATNConfig } from "./ATNConfig.js";
-import { BitSet } from "../misc/BitSet.js";
-import { DoubleDict } from "../utils/DoubleDict.js";
-import { PredictionContext } from "./PredictionContext.js";
-import { ATNState } from "./ATNState.js";
-import { ATNSimulator } from "./ATNSimulator.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
-import { HashSet } from "../misc/HashSet.js";
-import type { EqualityComparator } from "../misc/EqualityComparator.js";
+import { equalArrays, arrayToString } from "../utils/helpers";
+import { ATNConfig } from "./ATNConfig";
+import { BitSet } from "../misc/BitSet";
+import { DoubleDict } from "../utils/DoubleDict";
+import { PredictionContext } from "./PredictionContext";
+import { ATNState } from "./ATNState";
+import { ATNSimulator } from "./ATNSimulator";
+import { MurmurHash } from "../utils/MurmurHash";
+import { HashSet } from "../misc/HashSet";
+import type { EqualityComparator } from "../misc/EqualityComparator";
 
 class KeyTypeEqualityComparer implements EqualityComparator<ATNConfig> {
     public static readonly instance = new KeyTypeEqualityComparer();

@@ -6,13 +6,13 @@
 
 /* eslint-disable max-classes-per-file, jsdoc/require-jsdoc, jsdoc/require-param, jsdoc/require-returns */
 
-import { Recognizer } from "../Recognizer.js";
-import { ParserRuleContext } from "../ParserRuleContext.js";
-import { HashSet } from "../misc/HashSet.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
+import { Recognizer } from "../Recognizer";
+import { ParserRuleContext } from "../ParserRuleContext";
+import { HashSet } from "../misc/HashSet";
+import { MurmurHash } from "../utils/MurmurHash";
 
-import { IComparable, equalArrays } from "../utils/helpers.js";
-import { ATNSimulator } from "./ATNSimulator.js";
+import { IComparable, equalArrays } from "../utils/helpers";
+import { ATNSimulator } from "./ATNSimulator";
 
 /**
  * A tree structure used to record the semantic context in which

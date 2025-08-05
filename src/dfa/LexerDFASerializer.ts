@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Vocabulary } from "../Vocabulary.js";
-import { DFA } from "./DFA.js";
-import { DFASerializer } from "./DFASerializer.js";
+import { Vocabulary } from "../Vocabulary";
+import { DFA } from "./DFA";
+import { DFASerializer } from "./DFASerializer";
 
 export class LexerDFASerializer extends DFASerializer {
     public constructor(dfa: DFA) {

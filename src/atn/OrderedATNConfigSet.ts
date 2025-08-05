@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNConfigSet } from "./ATNConfigSet.js";
-import { OrderedHashSet } from "../misc/OrderedHashSet.js";
+import { ATNConfigSet } from "./ATNConfigSet";
+import { OrderedHashSet } from "../misc/OrderedHashSet";
 
 export class OrderedATNConfigSet extends ATNConfigSet {
     public constructor() {

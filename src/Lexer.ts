@@ -6,15 +6,15 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param */
 
-import { Token } from "./Token.js";
-import { Recognizer } from "./Recognizer.js";
-import { CommonTokenFactory } from "./CommonTokenFactory.js";
-import { RecognitionException } from "./RecognitionException.js";
-import { LexerNoViableAltException } from "./LexerNoViableAltException.js";
-import { LexerATNSimulator } from "./atn/LexerATNSimulator.js";
-import { CharStream } from "./CharStream.js";
-import { TokenFactory } from "./TokenFactory.js";
-import { TokenSource } from "./TokenSource.js";
+import { Token } from "./Token";
+import { Recognizer } from "./Recognizer";
+import { CommonTokenFactory } from "./CommonTokenFactory";
+import { RecognitionException } from "./RecognitionException";
+import { LexerNoViableAltException } from "./LexerNoViableAltException";
+import { LexerATNSimulator } from "./atn/LexerATNSimulator";
+import { CharStream } from "./CharStream";
+import { TokenFactory } from "./TokenFactory";
+import { TokenSource } from "./TokenSource";
 
 /**
  * Options used during lexer execution.

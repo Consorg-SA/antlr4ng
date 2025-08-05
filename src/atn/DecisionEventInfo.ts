@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { TokenStream } from "../TokenStream.js";
-import { ATNConfigSet } from "./ATNConfigSet.js";
+import { TokenStream } from "../TokenStream";
+import { ATNConfigSet } from "./ATNConfigSet";
 
 /**
  * This is the base class for gathering detailed information about prediction

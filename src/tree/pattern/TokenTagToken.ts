@@ -4,7 +4,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { CommonToken } from "../../CommonToken.js";
+import { CommonToken } from "../../CommonToken";
 
 /**
  * A {@link Token} object representing a token of a particular type; e.g.,

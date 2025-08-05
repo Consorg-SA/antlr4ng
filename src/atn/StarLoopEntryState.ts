@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNState } from "./ATNState.js";
-import { DecisionState } from "./DecisionState.js";
-import { StarLoopbackState } from "./StarLoopbackState.js";
+import { ATNState } from "./ATNState";
+import { DecisionState } from "./DecisionState";
+import { StarLoopbackState } from "./StarLoopbackState";
 
 export class StarLoopEntryState extends DecisionState {
     public static override readonly stateType = ATNState.STAR_LOOP_ENTRY;

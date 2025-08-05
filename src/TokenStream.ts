@@ -4,11 +4,11 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { type IntStream } from "./IntStream.js";
-import { type ParserRuleContext } from "./ParserRuleContext.js";
-import { type Token } from "./Token.js";
-import { type TokenSource } from "./TokenSource.js";
-import { type Interval } from "./misc/Interval.js";
+import type { IntStream } from "./IntStream";
+import type { ParserRuleContext } from "./ParserRuleContext";
+import type { Token } from "./Token";
+import type { TokenSource } from "./TokenSource";
+import type { Interval } from "./misc/Interval";
 
 /**
  * An IntStream whose symbols are {@link Token} instances.

@@ -6,10 +6,10 @@
 
 /* eslint-disable jsdoc/require-returns , jsdoc/require-param */
 
-import { Token } from "../Token.js";
-import { Interval } from "./Interval.js";
-import { Vocabulary } from "../Vocabulary.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
+import { Token } from "../Token";
+import { Interval } from "./Interval";
+import { Vocabulary } from "../Vocabulary";
+import { MurmurHash } from "../utils/MurmurHash";
 
 /**
  * This class implements the `IntSet` backed by a sorted array of

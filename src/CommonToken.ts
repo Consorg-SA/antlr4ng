@@ -6,12 +6,12 @@
 
 /* eslint-disable jsdoc/require-returns */
 
-import { CharStream } from "./CharStream.js";
-import { Recognizer } from "./Recognizer.js";
-import { Token } from "./Token.js";
-import { TokenSource } from "./TokenSource.js";
-import { WritableToken } from "./WritableToken.js";
-import { ATNSimulator } from "./atn/ATNSimulator.js";
+import { CharStream } from "./CharStream";
+import { Recognizer } from "./Recognizer";
+import { Token } from "./Token";
+import { TokenSource } from "./TokenSource";
+import { WritableToken } from "./WritableToken";
+import { ATNSimulator } from "./atn/ATNSimulator";
 
 export class CommonToken implements WritableToken {
     /**

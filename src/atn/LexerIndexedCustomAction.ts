@@ -6,9 +6,9 @@
 
 /* eslint-disable jsdoc/require-param */
 
-import { LexerAction } from "./LexerAction.js";
-import { Lexer } from "../Lexer.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
+import { LexerAction } from "./LexerAction";
+import { Lexer } from "../Lexer";
+import { MurmurHash } from "../utils/MurmurHash";
 
 /**
  * This implementation of {@link LexerAction} is used for tracking input offsets

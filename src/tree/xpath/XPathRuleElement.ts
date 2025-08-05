@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ParserRuleContext } from "../../ParserRuleContext.js";
-import { ParseTree } from "../ParseTree.js";
-import { Trees } from "../Trees.js";
-import { XPathElement } from "./XPathElement.js";
+import { ParserRuleContext } from "../../ParserRuleContext";
+import { ParseTree } from "../ParseTree";
+import { Trees } from "../Trees";
+import { XPathElement } from "./XPathElement";
 
 export class XPathRuleElement extends XPathElement {
     protected ruleIndex: number;

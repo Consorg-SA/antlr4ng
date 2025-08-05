@@ -4,7 +4,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { PredictionContext } from "./PredictionContext.js";
+import { PredictionContext } from "./PredictionContext";
 
 export class SingletonPredictionContext extends PredictionContext {
     public readonly parent: PredictionContext | null;

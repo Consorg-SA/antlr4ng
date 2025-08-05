@@ -6,10 +6,10 @@
 
 /* eslint-disable no-underscore-dangle */
 
-import { Parser } from "./Parser.js";
-import { ParserRuleContext } from "./ParserRuleContext.js";
-import { ParseTreeListener } from "./tree/ParseTreeListener.js";
-import { TerminalNode } from "./tree/TerminalNode.js";
+import { Parser } from "./Parser";
+import { ParserRuleContext } from "./ParserRuleContext";
+import { ParseTreeListener } from "./tree/ParseTreeListener";
+import { TerminalNode } from "./tree/TerminalNode";
 
 export class TraceListener implements ParseTreeListener {
     private parser: Parser;

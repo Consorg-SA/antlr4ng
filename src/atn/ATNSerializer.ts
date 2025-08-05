@@ -5,32 +5,32 @@
 
 /* eslint-disable jsdoc/require-returns */
 
-import { Token } from "../Token.js";
-import { HashMap } from "../misc/HashMap.js";
-import type { IntervalSet } from "../misc/IntervalSet.js";
-import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator.js";
-import { OrderedHashMap } from "../misc/OrderedHashMap.js";
-import { ATN } from "./ATN.js";
-import { ATNDeserializer } from "./ATNDeserializer.js";
-import { ATNState } from "./ATNState.js";
-import type { ActionTransition } from "./ActionTransition.js";
-import type { AtomTransition } from "./AtomTransition.js";
-import { BlockStartState } from "./BlockStartState.js";
-import { DecisionState } from "./DecisionState.js";
-import { LexerActionType } from "./LexerActionType.js";
-import type { LexerChannelAction } from "./LexerChannelAction.js";
-import type { LexerCustomAction } from "./LexerCustomAction.js";
-import type { LexerModeAction } from "./LexerModeAction.js";
-import type { LexerPushModeAction } from "./LexerPushModeAction.js";
-import type { LexerTypeAction } from "./LexerTypeAction.js";
-import type { LoopEndState } from "./LoopEndState.js";
-import type { PrecedencePredicateTransition } from "./PrecedencePredicateTransition.js";
-import type { PredicateTransition } from "./PredicateTransition.js";
-import type { RangeTransition } from "./RangeTransition.js";
-import { RuleStartState } from "./RuleStartState.js";
-import type { RuleTransition } from "./RuleTransition.js";
-import type { SetTransition } from "./SetTransition.js";
-import { Transition } from "./Transition.js";
+import { Token } from "../Token";
+import { HashMap } from "../misc/HashMap";
+import type { IntervalSet } from "../misc/IntervalSet";
+import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator";
+import { OrderedHashMap } from "../misc/OrderedHashMap";
+import { ATN } from "./ATN";
+import { ATNDeserializer } from "./ATNDeserializer";
+import { ATNState } from "./ATNState";
+import type { ActionTransition } from "./ActionTransition";
+import type { AtomTransition } from "./AtomTransition";
+import { BlockStartState } from "./BlockStartState";
+import { DecisionState } from "./DecisionState";
+import { LexerActionType } from "./LexerActionType";
+import type { LexerChannelAction } from "./LexerChannelAction";
+import type { LexerCustomAction } from "./LexerCustomAction";
+import type { LexerModeAction } from "./LexerModeAction";
+import type { LexerPushModeAction } from "./LexerPushModeAction";
+import type { LexerTypeAction } from "./LexerTypeAction";
+import type { LoopEndState } from "./LoopEndState";
+import type { PrecedencePredicateTransition } from "./PrecedencePredicateTransition";
+import type { PredicateTransition } from "./PredicateTransition";
+import type { RangeTransition } from "./RangeTransition";
+import { RuleStartState } from "./RuleStartState";
+import type { RuleTransition } from "./RuleTransition";
+import type { SetTransition } from "./SetTransition";
+import { Transition } from "./Transition";
 
 /**
  * This class represents a target neutral serializer for ATNs. An ATN is converted to a list of integers

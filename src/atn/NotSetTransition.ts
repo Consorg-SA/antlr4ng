@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { SetTransition } from "./SetTransition.js";
-import { Transition } from "./Transition.js";
+import { SetTransition } from "./SetTransition";
+import { Transition } from "./Transition";
 
 export class NotSetTransition extends SetTransition {
     public override get transitionType(): number {

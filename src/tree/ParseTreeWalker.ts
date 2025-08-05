@@ -4,11 +4,11 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ParserRuleContext } from "../ParserRuleContext.js";
-import { ErrorNode } from "./ErrorNode.js";
-import { ParseTree } from "./ParseTree.js";
-import { ParseTreeListener } from "./ParseTreeListener.js";
-import { TerminalNode } from "./TerminalNode.js";
+import { ParserRuleContext } from "../ParserRuleContext";
+import { ErrorNode } from "./ErrorNode";
+import { ParseTree } from "./ParseTree";
+import { ParseTreeListener } from "./ParseTreeListener";
+import { TerminalNode } from "./TerminalNode";
 
 export class ParseTreeWalker {
     public static DEFAULT = new ParseTreeWalker();

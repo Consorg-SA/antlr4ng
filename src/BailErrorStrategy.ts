@@ -6,11 +6,11 @@
 
 /* eslint-disable jsdoc/require-param */
 
-import { InputMismatchException } from "./InputMismatchException.js";
-import { ParseCancellationException } from "./misc/ParseCancellationException.js";
-import { DefaultErrorStrategy } from "./DefaultErrorStrategy.js";
-import { Parser } from "./Parser.js";
-import { RecognitionException } from "./RecognitionException.js";
+import { InputMismatchException } from "./InputMismatchException";
+import { ParseCancellationException } from "./misc/ParseCancellationException";
+import { DefaultErrorStrategy } from "./DefaultErrorStrategy";
+import { Parser } from "./Parser";
+import { RecognitionException } from "./RecognitionException";
 
 /**
  * This implementation of {@link ANTLRErrorStrategy} responds to syntax errors

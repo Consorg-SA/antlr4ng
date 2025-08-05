@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { type ParseTreeVisitor } from "./ParseTreeVisitor.js";
-import { TerminalNode } from "./TerminalNode.js";
+import type { ParseTreeVisitor } from "./ParseTreeVisitor";
+import { TerminalNode } from "./TerminalNode";
 
 /**
  * Represents a token that was consumed during resynchronization

@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { PredictionContext } from "./PredictionContext.js";
+import { PredictionContext } from "./PredictionContext";
 
-import { equalArrays, equalNumberArrays } from "../utils/helpers.js";
+import { equalArrays, equalNumberArrays } from "../utils/helpers";
 
 export class ArrayPredictionContext extends PredictionContext {
     public readonly parents: Array<PredictionContext | null> = [];

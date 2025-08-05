@@ -4,14 +4,14 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { type Parser } from "./Parser.js";
-import { type RecognitionException } from "./RecognitionException.js";
-import { type Recognizer } from "./Recognizer.js";
-import { type ATNConfigSet } from "./atn/ATNConfigSet.js";
-import { type DFA } from "./dfa/DFA.js";
-import { type ATNSimulator } from "./atn/ATNSimulator.js";
-import { type Token } from "./Token.js";
-import { type BitSet } from "./misc/BitSet.js";
+import type { Parser } from "./Parser";
+import type { RecognitionException } from "./RecognitionException";
+import type { Recognizer } from "./Recognizer";
+import type { ATNConfigSet } from "./atn/ATNConfigSet";
+import type { DFA } from "./dfa/DFA";
+import type { ATNSimulator } from "./atn/ATNSimulator";
+import type { Token } from "./Token";
+import type { BitSet } from "./misc/BitSet";
 
 /** How to emit recognition errors. */
 export interface ANTLRErrorListener {

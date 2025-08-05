@@ -7,46 +7,46 @@
 /* eslint-disable @typescript-eslint/naming-convention, jsdoc/require-returns */
 /* eslint-disable jsdoc/require-param */
 
-import { NoViableAltException } from "../NoViableAltException.js";
-import { Token } from "../Token.js";
-import { DFAState } from "../dfa/DFAState.js";
-import { BitSet } from "../misc/BitSet.js";
-import { HashSet } from "../misc/HashSet.js";
-import { DoubleDict } from "../utils/DoubleDict.js";
-import { ATN } from "./ATN.js";
-import { ATNConfig } from "./ATNConfig.js";
-import { ATNConfigSet } from "./ATNConfigSet.js";
-import { ATNSimulator } from "./ATNSimulator.js";
-import { ActionTransition } from "./ActionTransition.js";
-import { AtomTransition } from "./AtomTransition.js";
-import { NotSetTransition } from "./NotSetTransition.js";
-import { PredictionContext } from "./PredictionContext.js";
-import { predictionContextFromRuleContext } from "./PredictionContextUtils.js";
-import { PredictionMode } from "./PredictionMode.js";
-import { RuleStopState } from "./RuleStopState.js";
-import { RuleTransition } from "./RuleTransition.js";
-import { SemanticContext } from "./SemanticContext.js";
-import { SetTransition } from "./SetTransition.js";
+import { NoViableAltException } from "../NoViableAltException";
+import { Token } from "../Token";
+import { DFAState } from "../dfa/DFAState";
+import { BitSet } from "../misc/BitSet";
+import { HashSet } from "../misc/HashSet";
+import { DoubleDict } from "../utils/DoubleDict";
+import { ATN } from "./ATN";
+import { ATNConfig } from "./ATNConfig";
+import { ATNConfigSet } from "./ATNConfigSet";
+import { ATNSimulator } from "./ATNSimulator";
+import { ActionTransition } from "./ActionTransition";
+import { AtomTransition } from "./AtomTransition";
+import { NotSetTransition } from "./NotSetTransition";
+import { PredictionContext } from "./PredictionContext";
+import { predictionContextFromRuleContext } from "./PredictionContextUtils";
+import { PredictionMode } from "./PredictionMode";
+import { RuleStopState } from "./RuleStopState";
+import { RuleTransition } from "./RuleTransition";
+import { SemanticContext } from "./SemanticContext";
+import { SetTransition } from "./SetTransition";
 
-import { Parser } from "../Parser.js";
-import { ParserRuleContext } from "../ParserRuleContext.js";
-import { TokenStream } from "../TokenStream.js";
-import { DFA } from "../dfa/DFA.js";
-import { ATNState } from "./ATNState.js";
-import { DecisionState } from "./DecisionState.js";
-import { PredictionContextCache } from "./PredictionContextCache.js";
-import { Transition } from "./Transition.js";
+import { Parser } from "../Parser";
+import { ParserRuleContext } from "../ParserRuleContext";
+import { TokenStream } from "../TokenStream";
+import { DFA } from "../dfa/DFA";
+import { ATNState } from "./ATNState";
+import { DecisionState } from "./DecisionState";
+import { PredictionContextCache } from "./PredictionContextCache";
+import { Transition } from "./Transition";
 
-import { PredPrediction } from "../dfa/PredPrediction.js";
-import { Interval } from "../misc/Interval.js";
-import { arrayToString } from "../utils/helpers.js";
-import type { BlockStartState } from "./BlockStartState.js";
-import { EmptyPredictionContext } from "./EmptyPredictionContext.js";
-import type { EpsilonTransition } from "./EpsilonTransition.js";
-import type { PrecedencePredicateTransition } from "./PrecedencePredicateTransition.js";
-import type { PredicateTransition } from "./PredicateTransition.js";
-import type { StarLoopEntryState } from "./StarLoopEntryState.js";
-import { createSingletonPredictionContext } from "./helpers.js";
+import { PredPrediction } from "../dfa/PredPrediction";
+import { Interval } from "../misc/Interval";
+import { arrayToString } from "../utils/helpers";
+import type { BlockStartState } from "./BlockStartState";
+import { EmptyPredictionContext } from "./EmptyPredictionContext";
+import type { EpsilonTransition } from "./EpsilonTransition";
+import type { PrecedencePredicateTransition } from "./PrecedencePredicateTransition";
+import type { PredicateTransition } from "./PredicateTransition";
+import type { StarLoopEntryState } from "./StarLoopEntryState";
+import { createSingletonPredictionContext } from "./helpers";
 
 /** Comprises the input values for the current prediction run. */
 interface PredictionState {

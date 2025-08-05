@@ -6,27 +6,28 @@
 
 /* eslint-disable jsdoc/require-param, jsdoc/require-returns */
 
-import { CharStream } from "../CharStream.js";
-import { Lexer, type LexerOptions } from "../Lexer.js";
-import { LexerNoViableAltException } from "../LexerNoViableAltException.js";
-import { Token } from "../Token.js";
-import { DFA } from "../dfa/DFA.js";
-import { DFAState } from "../dfa/DFAState.js";
-import { ATN } from "./ATN.js";
-import { ATNConfigSet } from "./ATNConfigSet.js";
-import { ATNSimulator } from "./ATNSimulator.js";
-import { ATNState } from "./ATNState.js";
-import { ActionTransition } from "./ActionTransition.js";
-import { EmptyPredictionContext } from "./EmptyPredictionContext.js";
-import { LexerATNConfig } from "./LexerATNConfig.js";
-import { LexerActionExecutor } from "./LexerActionExecutor.js";
-import { OrderedATNConfigSet } from "./OrderedATNConfigSet.js";
-import { PredicateTransition } from "./PredicateTransition.js";
-import { PredictionContext } from "./PredictionContext.js";
-import { PredictionContextCache } from "./PredictionContextCache.js";
-import { RuleTransition } from "./RuleTransition.js";
-import { Transition } from "./Transition.js";
-import { createSingletonPredictionContext } from "./helpers.js";
+import { CharStream } from "../CharStream";
+import { Lexer } from "../Lexer";
+import type { LexerOptions } from "../Lexer";
+import { LexerNoViableAltException } from "../LexerNoViableAltException";
+import { Token } from "../Token";
+import { DFA } from "../dfa/DFA";
+import { DFAState } from "../dfa/DFAState";
+import { ATN } from "./ATN";
+import { ATNConfigSet } from "./ATNConfigSet";
+import { ATNSimulator } from "./ATNSimulator";
+import { ATNState } from "./ATNState";
+import { ActionTransition } from "./ActionTransition";
+import { EmptyPredictionContext } from "./EmptyPredictionContext";
+import { LexerATNConfig } from "./LexerATNConfig";
+import { LexerActionExecutor } from "./LexerActionExecutor";
+import { OrderedATNConfigSet } from "./OrderedATNConfigSet";
+import { PredicateTransition } from "./PredicateTransition";
+import { PredictionContext } from "./PredictionContext";
+import { PredictionContextCache } from "./PredictionContextCache";
+import { RuleTransition } from "./RuleTransition";
+import { Transition } from "./Transition";
+import { createSingletonPredictionContext } from "./helpers";
 
 /**
  * When we hit an accept state in either the DFA or the ATN, we

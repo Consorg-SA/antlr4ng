@@ -7,9 +7,9 @@
 /* eslint-disable max-classes-per-file, jsdoc/require-param, @typescript-eslint/naming-convention */
 /* eslint-disable jsdoc/require-returns */
 
-import { Token } from "./Token.js";
-import { TokenStream } from "./TokenStream.js";
-import { Interval } from "./misc/Interval.js";
+import { Token } from "./Token";
+import { TokenStream } from "./TokenStream";
+import { Interval } from "./misc/Interval";
 
 /**
  * Useful for rewriting out a buffered input token stream after doing some

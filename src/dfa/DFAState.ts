@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import type { ATNConfigSet } from "../atn/ATNConfigSet.js";
-import { LexerActionExecutor } from "../atn/LexerActionExecutor.js";
-import { arrayToString } from "../utils/helpers.js";
-import type { PredPrediction } from "./PredPrediction.js";
+import type { ATNConfigSet } from "../atn/ATNConfigSet";
+import { LexerActionExecutor } from "../atn/LexerActionExecutor";
+import { arrayToString } from "../utils/helpers";
+import type { PredPrediction } from "./PredPrediction";
 
 /**
  * A DFA state represents a set of possible ATN configurations.

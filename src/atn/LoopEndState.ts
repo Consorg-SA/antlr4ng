@@ -4,7 +4,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNState } from "./ATNState.js";
+import { ATNState } from "./ATNState";
 
 /**
  * Mark the end of a * or + loop

@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Transition } from "./Transition.js";
-import { ATNState } from "./ATNState.js";
+import { Transition } from "./Transition";
+import { ATNState } from "./ATNState";
 
 export class EpsilonTransition extends Transition {
     readonly #outermostPrecedenceReturn: number;

@@ -4,11 +4,11 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import type { CharStream } from "./CharStream.js";
-import { CommonTokenFactory } from "./CommonTokenFactory.js";
-import { Token } from "./Token.js";
-import type { TokenFactory } from "./TokenFactory.js";
-import type { TokenSource } from "./TokenSource.js";
+import type { CharStream } from "./CharStream";
+import { CommonTokenFactory } from "./CommonTokenFactory";
+import { Token } from "./Token";
+import type { TokenFactory } from "./TokenFactory";
+import type { TokenSource } from "./TokenSource";
 
 /**
  * Provides an implementation of {@link TokenSource} as a wrapper around a list

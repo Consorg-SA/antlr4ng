@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNState } from "./ATNState.js";
-import { BlockStartState } from "./BlockStartState.js";
+import { ATNState } from "./ATNState";
+import { BlockStartState } from "./BlockStartState";
 
 /**
  * Terminal node of a simple `(a|b|c)` block.

@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Recognizer } from "../Recognizer.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
-import { ATNSimulator } from "./ATNSimulator.js";
+import { Recognizer } from "../Recognizer";
+import { MurmurHash } from "../utils/MurmurHash";
+import { ATNSimulator } from "./ATNSimulator";
 
 // Most of the implementation is located in PredictionContextUtils.ts, to avoid circular dependencies.
 

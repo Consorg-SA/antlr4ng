@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ErrorNode } from "./ErrorNode.js";
-import { ParseTree } from "./ParseTree.js";
-import { ParseTreeVisitor } from "./ParseTreeVisitor.js";
-import { TerminalNode } from "./TerminalNode.js";
+import { ErrorNode } from "./ErrorNode";
+import { ParseTree } from "./ParseTree";
+import { ParseTreeVisitor } from "./ParseTreeVisitor";
+import { TerminalNode } from "./TerminalNode";
 
 export abstract class AbstractParseTreeVisitor<T> implements ParseTreeVisitor<T> {
     public visit(tree: ParseTree): T | null {

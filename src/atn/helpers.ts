@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { EmptyPredictionContext } from "./EmptyPredictionContext.js";
-import { PredictionContext } from "./PredictionContext.js";
-import { SingletonPredictionContext } from "./SingletonPredictionContext.js";
+import { EmptyPredictionContext } from "./EmptyPredictionContext";
+import { PredictionContext } from "./PredictionContext";
+import { SingletonPredictionContext } from "./SingletonPredictionContext";
 
 export const createSingletonPredictionContext = (parent: PredictionContext | undefined,
     returnState: number): SingletonPredictionContext => {

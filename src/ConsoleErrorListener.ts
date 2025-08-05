@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { BaseErrorListener } from "./BaseErrorListener.js";
-import { RecognitionException } from "./RecognitionException.js";
-import { Recognizer } from "./Recognizer.js";
-import { ATNSimulator } from "./atn/ATNSimulator.js";
+import { BaseErrorListener } from "./BaseErrorListener";
+import { RecognitionException } from "./RecognitionException";
+import { Recognizer } from "./Recognizer";
+import { ATNSimulator } from "./atn/ATNSimulator";
 
 /**
  * This implementation prints messages to the console containing the values of `line`, `charPositionInLine`,

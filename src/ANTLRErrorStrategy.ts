@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { type RecognitionException } from "./RecognitionException.js";
-import { type Parser } from "./Parser.js";
-import { type Token } from "./Token.js";
+import type { RecognitionException } from "./RecognitionException";
+import type { Parser } from "./Parser";
+import type { Token } from "./Token";
 
 /**
  * The interface for defining strategies to deal with syntax errors encountered

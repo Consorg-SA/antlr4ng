@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { BlockEndState } from "./BlockEndState.js";
-import { DecisionState } from "./DecisionState.js";
+import { BlockEndState } from "./BlockEndState";
+import { DecisionState } from "./DecisionState";
 
 /**
  *  The start of a regular `(...)` block

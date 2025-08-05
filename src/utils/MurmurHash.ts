@@ -9,7 +9,7 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
 
-import { type IComparable } from "./helpers.js";
+import type { IComparable } from "./helpers";
 
 const c1 = 0xCC9E2D51;
 const c2 = 0x1B873593;

@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { IntervalSet } from "../misc/IntervalSet.js";
-import { IComparable } from "../utils/helpers.js";
-import { Transition } from "./Transition.js";
+import { IntervalSet } from "../misc/IntervalSet";
+import { IComparable } from "../utils/helpers";
+import { Transition } from "./Transition";
 
 export class ATNState implements IComparable {
     public static readonly INVALID_STATE_NUMBER = -1;

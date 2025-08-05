@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-export * from "./DFA.js";
-export * from "./DFASerializer.js";
-export * from "./DFAState.js";
-export * from "./LexerDFASerializer.js";
-export * from "./PredPrediction.js";
+export * from "./DFA";
+export * from "./DFASerializer";
+export * from "./DFAState";
+export * from "./LexerDFASerializer";
+export * from "./PredPrediction";

@@ -4,15 +4,15 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { BaseErrorListener } from "./BaseErrorListener.js";
-import { Parser } from "./Parser.js";
-import { RecognitionException } from "./RecognitionException.js";
-import { Recognizer } from "./Recognizer.js";
-import { Token } from "./Token.js";
-import { ATNConfigSet } from "./atn/ATNConfigSet.js";
-import { ATNSimulator } from "./atn/ATNSimulator.js";
-import { DFA } from "./dfa/DFA.js";
-import { BitSet } from "./misc/BitSet.js";
+import { BaseErrorListener } from "./BaseErrorListener";
+import { Parser } from "./Parser";
+import { RecognitionException } from "./RecognitionException";
+import { Recognizer } from "./Recognizer";
+import { Token } from "./Token";
+import { ATNConfigSet } from "./atn/ATNConfigSet";
+import { ATNSimulator } from "./atn/ATNSimulator";
+import { DFA } from "./dfa/DFA";
+import { BitSet } from "./misc/BitSet";
 
 export class ProxyErrorListener extends BaseErrorListener {
     public constructor(private delegates: BaseErrorListener[]) {

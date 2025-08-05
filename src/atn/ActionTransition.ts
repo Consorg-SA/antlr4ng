@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNState } from "./ATNState.js";
-import { Transition } from "./Transition.js";
+import { ATNState } from "./ATNState";
+import { Transition } from "./Transition";
 
 export class ActionTransition extends Transition {
     public ruleIndex: number;

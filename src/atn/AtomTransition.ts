@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { IntervalSet } from "../misc/IntervalSet.js";
-import { Transition } from "./Transition.js";
-import { ATNState } from "./ATNState.js";
+import { IntervalSet } from "../misc/IntervalSet";
+import { Transition } from "./Transition";
+import { ATNState } from "./ATNState";
 
 export class AtomTransition extends Transition {
     /** The token type or character value; or, signifies special label. */

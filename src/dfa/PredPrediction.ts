@@ -4,7 +4,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import type { SemanticContext } from "../atn/SemanticContext.js";
+import type { SemanticContext } from "../atn/SemanticContext";
 
 /** Map a predicate to a predicted alternative. */
 export interface PredPrediction {

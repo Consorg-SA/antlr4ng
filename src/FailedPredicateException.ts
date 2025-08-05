@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { PredicateTransition } from "./atn/PredicateTransition.js";
-import { Parser } from "./Parser.js";
-import { RecognitionException } from "./RecognitionException.js";
+import { PredicateTransition } from "./atn/PredicateTransition";
+import { Parser } from "./Parser";
+import { RecognitionException } from "./RecognitionException";
 
 /**
  * A semantic predicate failed during validation. Validation of predicates

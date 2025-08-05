@@ -7,17 +7,17 @@
 /* eslint-disable jsdoc/require-param */
 /* eslint-disable jsdoc/require-returns */
 
-import { Token } from "./Token.js";
-import { ConsoleErrorListener } from "./ConsoleErrorListener.js";
-import { ProxyErrorListener } from "./ProxyErrorListener.js";
-import { ATNSimulator } from "./atn/ATNSimulator.js";
-import { ParseInfo } from "./atn/ParseInfo.js";
-import { Vocabulary } from "./Vocabulary.js";
-import { ANTLRErrorListener } from "./ANTLRErrorListener.js";
-import { RecognitionException } from "./RecognitionException.js";
-import { ATN } from "./atn/ATN.js";
-import { ParserRuleContext } from "./ParserRuleContext.js";
-import { IntStream } from "./IntStream.js";
+import { Token } from "./Token";
+import { ConsoleErrorListener } from "./ConsoleErrorListener";
+import { ProxyErrorListener } from "./ProxyErrorListener";
+import { ATNSimulator } from "./atn/ATNSimulator";
+import { ParseInfo } from "./atn/ParseInfo";
+import { Vocabulary } from "./Vocabulary";
+import { ANTLRErrorListener } from "./ANTLRErrorListener";
+import { RecognitionException } from "./RecognitionException";
+import { ATN } from "./atn/ATN";
+import { ParserRuleContext } from "./ParserRuleContext";
+import { IntStream } from "./IntStream";
 
 export abstract class Recognizer<ATNInterpreter extends ATNSimulator> {
     public static readonly EOF = -1;

@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import type { ATNState } from "./ATNState.js";
-import { AtomTransition } from "./AtomTransition.js";
-import { RangeTransition } from "./RangeTransition.js";
-import type { Transition } from "./Transition.js";
+import type { ATNState } from "./ATNState";
+import { AtomTransition } from "./AtomTransition";
+import { RangeTransition } from "./RangeTransition";
+import type { Transition } from "./Transition";
 
 /* eslint-disable jsdoc/require-param */
 

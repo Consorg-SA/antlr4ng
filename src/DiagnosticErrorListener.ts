@@ -4,12 +4,12 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { BaseErrorListener } from "./BaseErrorListener.js";
-import { Parser } from "./Parser.js";
-import { ATNConfigSet } from "./atn/ATNConfigSet.js";
-import { DFA } from "./dfa/DFA.js";
-import { BitSet } from "./misc/BitSet.js";
-import { Interval } from "./misc/Interval.js";
+import { BaseErrorListener } from "./BaseErrorListener";
+import { Parser } from "./Parser";
+import { ATNConfigSet } from "./atn/ATNConfigSet";
+import { DFA } from "./dfa/DFA";
+import { BitSet } from "./misc/BitSet";
+import { Interval } from "./misc/Interval";
 
 /**
  * This implementation of {@link ANTLRErrorListener} can be used to identify

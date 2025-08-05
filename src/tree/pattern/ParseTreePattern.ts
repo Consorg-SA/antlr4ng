@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import type { ParseTree } from "../ParseTree.js";
-import { XPath } from "../xpath/XPath.js";
-import type { ParseTreeMatch } from "./ParseTreeMatch.js";
-import type { ParseTreePatternMatcher } from "./ParseTreePatternMatcher.js";
+import type { ParseTree } from "../ParseTree";
+import { XPath } from "../xpath/XPath";
+import type { ParseTreeMatch } from "./ParseTreeMatch";
+import type { ParseTreePatternMatcher } from "./ParseTreePatternMatcher";
 
 /**
  * A pattern like `<ID> = <expr>;` converted to a {@link ParseTree} by

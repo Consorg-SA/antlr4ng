@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { LexerActionType } from "./LexerActionType.js";
-import { LexerAction } from "./LexerAction.js";
-import { Lexer } from "../Lexer.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
+import { LexerActionType } from "./LexerActionType";
+import { LexerAction } from "./LexerAction";
+import { Lexer } from "../Lexer";
+import { MurmurHash } from "../utils/MurmurHash";
 
 /**
  * Implements the `type` lexer action by calling {@link Lexer.setType} with the assigned type.

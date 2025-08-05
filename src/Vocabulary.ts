@@ -6,7 +6,7 @@
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import { Token } from "./Token.js";
+import { Token } from "./Token";
 
 export class Vocabulary {
     public static readonly EMPTY_NAMES: string[] = [];

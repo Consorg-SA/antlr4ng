@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { SemanticContext } from "./SemanticContext.js";
-import { AbstractPredicateTransition } from "./AbstractPredicateTransition.js";
-import { ATNState } from "./ATNState.js";
-import { Transition } from "./Transition.js";
+import { SemanticContext } from "./SemanticContext";
+import { AbstractPredicateTransition } from "./AbstractPredicateTransition";
+import { ATNState } from "./ATNState";
+import { Transition } from "./Transition";
 
 export class PrecedencePredicateTransition extends AbstractPredicateTransition {
     public readonly precedence: number;

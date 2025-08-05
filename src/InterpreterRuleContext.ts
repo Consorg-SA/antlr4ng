@@ -4,7 +4,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ParserRuleContext } from "./ParserRuleContext.js";
+import { ParserRuleContext } from "./ParserRuleContext";
 
 /**
  * This class extends {@link ParserRuleContext} by allowing the value of

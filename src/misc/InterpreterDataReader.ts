@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Vocabulary } from "../Vocabulary.js";
-import { ATN } from "../atn/ATN.js";
-import { ATNDeserializer } from "../atn/ATNDeserializer.js";
+import { Vocabulary } from "../Vocabulary";
+import { ATN } from "../atn/ATN";
+import { ATNDeserializer } from "../atn/ATNDeserializer";
 
 /** The data in an interpreter file. */
 export interface IInterpreterData {

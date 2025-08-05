@@ -6,12 +6,12 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param */
 
-import type { ParserRuleContext } from "./ParserRuleContext.js";
-import { Token } from "./Token.js";
-import type { TokenSource } from "./TokenSource.js";
-import type { TokenStream } from "./TokenStream.js";
-import { isWritableToken } from "./WritableToken.js";
-import { Interval } from "./misc/Interval.js";
+import type { ParserRuleContext } from "./ParserRuleContext";
+import { Token } from "./Token";
+import type { TokenSource } from "./TokenSource";
+import type { TokenStream } from "./TokenStream";
+import { isWritableToken } from "./WritableToken";
+import { Interval } from "./misc/Interval";
 
 export class UnbufferedTokenStream implements TokenStream {
     public readonly tokenSource: TokenSource;

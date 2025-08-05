@@ -6,11 +6,11 @@
 
 /* eslint-disable jsdoc/require-param */
 
-import { LexerIndexedCustomAction } from "./LexerIndexedCustomAction.js";
-import { LexerAction } from "./LexerAction.js";
-import { CharStream } from "../CharStream.js";
-import { Lexer } from "../Lexer.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
+import { LexerIndexedCustomAction } from "./LexerIndexedCustomAction";
+import { LexerAction } from "./LexerAction";
+import { CharStream } from "../CharStream";
+import { Lexer } from "../Lexer";
+import { MurmurHash } from "../utils/MurmurHash";
 
 export class LexerActionExecutor implements LexerAction {
     public readonly lexerActions: LexerAction[];

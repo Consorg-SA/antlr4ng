@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import type { IComparable } from "../utils/helpers.js";
-import { HashSet } from "./HashSet.js";
+import type { IComparable } from "../utils/helpers";
+import { HashSet } from "./HashSet";
 
 export class OrderedHashSet<T extends IComparable> extends HashSet<T> {
     private elements: T[] = [];

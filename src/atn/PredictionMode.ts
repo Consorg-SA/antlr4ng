@@ -6,17 +6,17 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param */
 
-import { ATN } from "./ATN.js";
-import { RuleStopState } from "./RuleStopState.js";
-import { ATNConfigSet } from "./ATNConfigSet.js";
-import { ATNConfig } from "./ATNConfig.js";
-import { SemanticContext } from "./SemanticContext.js";
-import { BitSet } from "../misc/BitSet.js";
-import { ATNState } from "./ATNState.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
-import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator.js";
-import { HashMap } from "../misc/HashMap.js";
-import type { EqualityComparator } from "../misc/EqualityComparator.js";
+import { ATN } from "./ATN";
+import { RuleStopState } from "./RuleStopState";
+import { ATNConfigSet } from "./ATNConfigSet";
+import { ATNConfig } from "./ATNConfig";
+import { SemanticContext } from "./SemanticContext";
+import { BitSet } from "../misc/BitSet";
+import { ATNState } from "./ATNState";
+import { MurmurHash } from "../utils/MurmurHash";
+import { ObjectEqualityComparator } from "../misc/ObjectEqualityComparator";
+import { HashMap } from "../misc/HashMap";
+import type { EqualityComparator } from "../misc/EqualityComparator";
 
 class SubsetEqualityComparer implements EqualityComparator<ATNConfig> {
     public static readonly instance = new SubsetEqualityComparer();

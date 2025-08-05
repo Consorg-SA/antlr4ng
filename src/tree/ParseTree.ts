@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { type Interval } from "../misc/Interval.js";
-import { type Parser } from "../Parser.js";
-import { type ParseTreeVisitor } from "./ParseTreeVisitor.js";
+import type { Interval } from "../misc/Interval";
+import type { Parser } from "../Parser";
+import type { ParseTreeVisitor } from "./ParseTreeVisitor";
 
 /**
  * The basic notion of a tree has a parent, a payload, and a list of children.

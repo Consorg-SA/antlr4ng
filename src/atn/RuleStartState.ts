@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNState } from "./ATNState.js";
-import { RuleStopState } from "./RuleStopState.js";
+import { ATNState } from "./ATNState";
+import { RuleStopState } from "./RuleStopState";
 
 export class RuleStartState extends ATNState {
     public static override readonly stateType = ATNState.RULE_START;

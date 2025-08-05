@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { type ErrorNode } from "./ErrorNode.js";
-import { type ParseTree } from "./ParseTree.js";
-import { type TerminalNode } from "./TerminalNode.js";
+import type { ErrorNode } from "./ErrorNode";
+import type { ParseTree } from "./ParseTree";
+import type { TerminalNode } from "./TerminalNode";
 
 /**
  * This interface defines the basic notion of a parse tree visitor. Generated

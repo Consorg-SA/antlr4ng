@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { DecisionEventInfo } from "./DecisionEventInfo.js";
-import { SemanticContext } from "./SemanticContext.js";
+import { DecisionEventInfo } from "./DecisionEventInfo";
+import { SemanticContext } from "./SemanticContext";
 
 /**
  * This interface represents profiling event information for semantic predicate

@@ -6,9 +6,9 @@
 
 /* eslint-disable jsdoc/require-param */
 
-import { LexerActionType } from "./LexerActionType.js";
-import { LexerAction } from "./LexerAction.js";
-import { Lexer } from "../Lexer.js";
+import { LexerActionType } from "./LexerActionType";
+import { LexerAction } from "./LexerAction";
+import { Lexer } from "../Lexer";
 
 /**
  * Implements the `more` lexer action by calling {@link Lexer//more}.

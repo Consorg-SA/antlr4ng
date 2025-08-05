@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { BitSet } from "../index.js";
-import { DecisionEventInfo } from "./DecisionEventInfo.js";
+import { BitSet } from "../index";
+import { DecisionEventInfo } from "./DecisionEventInfo";
 
 /**
  * This class represents profiling event information for an ambiguity.

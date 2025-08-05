@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { PredictionContext } from "./PredictionContext.js";
-import { SingletonPredictionContext } from "./SingletonPredictionContext.js";
+import { PredictionContext } from "./PredictionContext";
+import { SingletonPredictionContext } from "./SingletonPredictionContext";
 
 export class EmptyPredictionContext extends SingletonPredictionContext {
     /**

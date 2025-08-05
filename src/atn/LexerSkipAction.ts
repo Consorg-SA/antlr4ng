@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { LexerActionType } from "./LexerActionType.js";
-import { LexerAction } from "./LexerAction.js";
-import { Lexer } from "../Lexer.js";
+import { LexerActionType } from "./LexerActionType";
+import { LexerAction } from "./LexerAction";
+import { Lexer } from "../Lexer";
 
 /**
  * Implements the `skip` lexer action by calling {@link Lexer//skip}.

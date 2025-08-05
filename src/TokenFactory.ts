@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { type CharStream } from "./CharStream.js";
-import { type Token } from "./Token.js";
-import { type TokenSource } from "./TokenSource.js";
+import type { CharStream } from "./CharStream";
+import type { Token } from "./Token";
+import type { TokenSource } from "./TokenSource";
 
 export interface TokenFactory<Symbol extends Token> {
     /**

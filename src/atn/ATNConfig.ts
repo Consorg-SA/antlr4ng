@@ -6,12 +6,12 @@
 
 /* eslint-disable jsdoc/require-param, jsdoc/require-returns */
 
-import { SemanticContext } from "./SemanticContext.js";
-import { ATNState } from "./ATNState.js";
-import { PredictionContext } from "./PredictionContext.js";
-import { Recognizer } from "../Recognizer.js";
-import { ATNSimulator } from "./ATNSimulator.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
+import { SemanticContext } from "./SemanticContext";
+import { ATNState } from "./ATNState";
+import { PredictionContext } from "./PredictionContext";
+import { Recognizer } from "../Recognizer";
+import { ATNSimulator } from "./ATNSimulator";
+import { MurmurHash } from "../utils/MurmurHash";
 
 export class ATNConfig {
     /** The ATN state associated with this configuration */

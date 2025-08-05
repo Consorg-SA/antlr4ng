@@ -4,7 +4,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Chunk } from "./Chunk.js";
+import { Chunk } from "./Chunk";
 
 /**
  * Represents a span of raw text (concrete syntax) between tags in a tree

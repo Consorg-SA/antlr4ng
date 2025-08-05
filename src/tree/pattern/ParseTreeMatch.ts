@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import type { MultiMap } from "../../misc/MultiMap.js";
-import type { ParseTree } from "../ParseTree.js";
-import type { ParseTreePattern } from "./ParseTreePattern.js";
+import type { MultiMap } from "../../misc/MultiMap";
+import type { ParseTree } from "../ParseTree";
+import type { ParseTreePattern } from "./ParseTreePattern";
 
 /**
  * Represents the result of matching a {@link ParseTree} against a tree pattern.

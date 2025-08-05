@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { IntervalSet } from "../misc/IntervalSet.js";
-import { ATNState } from "./ATNState.js";
-import { Transition } from "./Transition.js";
+import { IntervalSet } from "../misc/IntervalSet";
+import { ATNState } from "./ATNState";
+import { Transition } from "./Transition";
 
 export class RangeTransition extends Transition {
     public readonly start: number;

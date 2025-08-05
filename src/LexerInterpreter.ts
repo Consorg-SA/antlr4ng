@@ -4,13 +4,13 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Lexer } from "./Lexer.js";
-import { LexerATNSimulator } from "./atn/LexerATNSimulator.js";
-import { PredictionContextCache } from "./atn/PredictionContextCache.js";
-import { DFA } from "./dfa/DFA.js";
-import { ATN } from "./atn/ATN.js";
-import { Vocabulary } from "./Vocabulary.js";
-import { CharStream } from "./CharStream.js";
+import { Lexer } from "./Lexer";
+import { LexerATNSimulator } from "./atn/LexerATNSimulator";
+import { PredictionContextCache } from "./atn/PredictionContextCache";
+import { DFA } from "./dfa/DFA";
+import { ATN } from "./atn/ATN";
+import { Vocabulary } from "./Vocabulary";
+import { CharStream } from "./CharStream";
 
 export class LexerInterpreter extends Lexer {
     private decisionToDFA: DFA[];

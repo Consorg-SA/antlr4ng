@@ -6,7 +6,7 @@
 
 /* eslint-disable jsdoc/require-returns */
 
-import { DecisionInfo, ProfilingATNSimulator } from "./index.js";
+import { DecisionInfo, ProfilingATNSimulator } from "./index";
 
 /**
  * This class provides access to specific and aggregate statistics gathered

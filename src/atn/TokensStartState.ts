@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNState } from "./ATNState.js";
-import { DecisionState } from "./DecisionState.js";
+import { ATNState } from "./ATNState";
+import { DecisionState } from "./DecisionState";
 
 /**
  * The Tokens rule start state linking to each lexer rule start state

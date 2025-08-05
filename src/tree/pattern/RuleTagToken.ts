@@ -6,9 +6,9 @@
 
 /* eslint-disable jsdoc/require-returns */
 
-import type { CharStream } from "../../CharStream.js";
-import { Token } from "../../Token.js";
-import type { TokenSource } from "../../TokenSource.js";
+import type { CharStream } from "../../CharStream";
+import { Token } from "../../Token";
+import type { TokenSource } from "../../TokenSource";
 
 /**
  * A {@link Token} object representing an entire subtree matched by a parser

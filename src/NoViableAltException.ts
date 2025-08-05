@@ -4,12 +4,12 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Parser } from "./Parser.js";
-import { ParserRuleContext } from "./ParserRuleContext.js";
-import { RecognitionException } from "./RecognitionException.js";
-import { Token } from "./Token.js";
-import { TokenStream } from "./TokenStream.js";
-import { ATNConfigSet } from "./atn/ATNConfigSet.js";
+import { Parser } from "./Parser";
+import { ParserRuleContext } from "./ParserRuleContext";
+import { RecognitionException } from "./RecognitionException";
+import { Token } from "./Token";
+import { TokenStream } from "./TokenStream";
+import { ATNConfigSet } from "./atn/ATNConfigSet";
 
 /**
  * Indicates that the parser could not decide which of two or more paths

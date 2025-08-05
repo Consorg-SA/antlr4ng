@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNState } from "./ATNState.js";
-import { BlockStartState } from "./BlockStartState.js";
-import { PlusLoopbackState } from "./PlusLoopbackState.js";
+import { ATNState } from "./ATNState";
+import { BlockStartState } from "./BlockStartState";
+import { PlusLoopbackState } from "./PlusLoopbackState";
 
 /**
  * Start of `(A|B|...)+` loop. Technically a decision state, but

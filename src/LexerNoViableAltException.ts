@@ -4,11 +4,11 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNConfigSet } from "./atn/ATNConfigSet.js";
-import { CharStream } from "./CharStream.js";
-import { Lexer } from "./Lexer.js";
-import { RecognitionException } from "./RecognitionException.js";
-import { TokenStream } from "./TokenStream.js";
+import { ATNConfigSet } from "./atn/ATNConfigSet";
+import { CharStream } from "./CharStream";
+import { Lexer } from "./Lexer";
+import { RecognitionException } from "./RecognitionException";
+import { TokenStream } from "./TokenStream";
 
 export class LexerNoViableAltException extends RecognitionException {
     public startIndex: number;

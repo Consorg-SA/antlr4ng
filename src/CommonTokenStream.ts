@@ -6,9 +6,9 @@
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import { Token } from "./Token.js";
-import { BufferedTokenStream } from "./BufferedTokenStream.js";
-import { TokenSource } from "./TokenSource.js";
+import { Token } from "./Token";
+import { BufferedTokenStream } from "./BufferedTokenStream";
+import { TokenSource } from "./TokenSource";
 
 /**
  * This class extends {@link BufferedTokenStream} with functionality to filter

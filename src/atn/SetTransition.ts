@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { IntervalSet } from "../misc/IntervalSet.js";
-import { Token } from "../Token.js";
-import { ATNState } from "./ATNState.js";
-import { Transition } from "./Transition.js";
+import { IntervalSet } from "../misc/IntervalSet";
+import { Token } from "../Token";
+import { ATNState } from "./ATNState";
+import { Transition } from "./Transition";
 
 /** A transition containing a set of values. */
 export class SetTransition extends Transition {

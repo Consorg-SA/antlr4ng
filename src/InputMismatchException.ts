@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { RecognitionException } from "./RecognitionException.js";
-import { Parser } from "./Parser.js";
+import { RecognitionException } from "./RecognitionException";
+import { Parser } from "./Parser";
 
 /**
  * This signifies any kind of mismatched input exceptions such as

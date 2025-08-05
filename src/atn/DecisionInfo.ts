@@ -4,11 +4,11 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { AmbiguityInfo } from "./AmbiguityInfo.js";
-import { ContextSensitivityInfo } from "./ContextSensitivityInfo.js";
-import type { DecisionEventInfo } from "./DecisionEventInfo.js";
-import { LookaheadEventInfo } from "./LookaheadEventInfo.js";
-import { PredicateEvalInfo } from "./PredicateEvalInfo.js";
+import { AmbiguityInfo } from "./AmbiguityInfo";
+import { ContextSensitivityInfo } from "./ContextSensitivityInfo";
+import type { DecisionEventInfo } from "./DecisionEventInfo";
+import { LookaheadEventInfo } from "./LookaheadEventInfo";
+import { PredicateEvalInfo } from "./PredicateEvalInfo";
 
 export class DecisionInfo {
     /**

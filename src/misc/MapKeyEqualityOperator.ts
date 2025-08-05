@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import type { IComparable } from "../utils/helpers.js";
-import type { EqualityComparator } from "./EqualityComparator.js";
+import type { IComparable } from "../utils/helpers";
+import type { EqualityComparator } from "./EqualityComparator";
 
 /**
  * Since `HashMap` is implemented on top of `HashSet`, we defined a bucket type which can store a

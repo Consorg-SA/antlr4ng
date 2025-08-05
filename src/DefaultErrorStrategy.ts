@@ -6,17 +6,17 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param */
 
-import { FailedPredicateException } from "./FailedPredicateException.js";
-import { InputMismatchException } from "./InputMismatchException.js";
-import { NoViableAltException } from "./NoViableAltException.js";
-import { ATNState } from "./atn/ATNState.js";
-import { Token } from "./Token.js";
-import { IntervalSet } from "./misc/IntervalSet.js";
-import { ParserRuleContext } from "./ParserRuleContext.js";
-import { Parser } from "./Parser.js";
-import { RecognitionException } from "./RecognitionException.js";
-import { CommonToken } from "./CommonToken.js";
-import { RuleTransition } from "./atn/RuleTransition.js";
+import { FailedPredicateException } from "./FailedPredicateException";
+import { InputMismatchException } from "./InputMismatchException";
+import { NoViableAltException } from "./NoViableAltException";
+import { ATNState } from "./atn/ATNState";
+import { Token } from "./Token";
+import { IntervalSet } from "./misc/IntervalSet";
+import { ParserRuleContext } from "./ParserRuleContext";
+import { Parser } from "./Parser";
+import { RecognitionException } from "./RecognitionException";
+import { CommonToken } from "./CommonToken";
+import { RuleTransition } from "./atn/RuleTransition";
 
 /**
  * This is the default implementation of {@link ANTLRErrorStrategy} used for

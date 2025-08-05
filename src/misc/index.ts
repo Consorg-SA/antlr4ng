@@ -4,12 +4,12 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-export * from "./BitSet.js";
-export * from "./HashMap.js";
-export * from "./HashSet.js";
-export * from "./Interval.js";
-export * from "./IntervalSet.js";
-export * from "./ParseCancellationException.js";
-export * from "./InterpreterDataReader.js";
-export * from "./OrderedHashMap.js";
-export * from "./OrderedHashSet.js";
+export * from "./BitSet";
+export * from "./HashMap";
+export * from "./HashSet";
+export * from "./Interval";
+export * from "./IntervalSet";
+export * from "./ParseCancellationException";
+export * from "./InterpreterDataReader";
+export * from "./OrderedHashMap";
+export * from "./OrderedHashSet";

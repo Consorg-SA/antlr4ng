@@ -4,13 +4,13 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-export * from "./Chunk.js";
-export * from "./ParseTreeMatch.js";
-export * from "./ParseTreePattern.js";
-export * from "./ParseTreePatternMatcher.js";
-export * from "./RuleTagToken.js";
-export * from "./TagChunk.js";
-export * from "./TextChunk.js";
-export * from "./TokenTagToken.js";
-export * from "./CannotInvokeStartRuleError.js";
-export * from "./StartRuleDoesNotConsumeFullPatternError.js";
+export * from "./Chunk";
+export * from "./ParseTreeMatch";
+export * from "./ParseTreePattern";
+export * from "./ParseTreePatternMatcher";
+export * from "./RuleTagToken";
+export * from "./TagChunk";
+export * from "./TextChunk";
+export * from "./TokenTagToken";
+export * from "./CannotInvokeStartRuleError";
+export * from "./StartRuleDoesNotConsumeFullPatternError";

@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNState } from "./ATNState.js";
-import { Transition } from "./Transition.js";
+import { ATNState } from "./ATNState";
+import { Transition } from "./Transition";
 
 /** Used as base for PredicateTransition and PrecedencePredicateTransition, without adding their individual fields. */
 export abstract class AbstractPredicateTransition extends Transition {

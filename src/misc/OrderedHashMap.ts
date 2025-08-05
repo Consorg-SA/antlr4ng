@@ -4,8 +4,8 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import type { IComparable } from "../utils/helpers.js";
-import { HashMap } from "./HashMap.js";
+import type { IComparable } from "../utils/helpers";
+import { HashMap } from "./HashMap";
 
 /**
  * This class extends `HashMap` to maintain the insertion order of the keys.

@@ -4,9 +4,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { DFA } from "./DFA.js";
-import { DFAState } from "./DFAState.js";
-import { Vocabulary } from "../Vocabulary.js";
+import { DFA } from "./DFA";
+import { DFAState } from "./DFAState";
+import { Vocabulary } from "../Vocabulary";
 
 /** A DFA walker that knows how to dump them to serialized strings. */
 export class DFASerializer {

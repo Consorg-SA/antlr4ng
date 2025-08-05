@@ -4,6 +4,6 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-export * from "./helpers.js";
-export * from "./MurmurHash.js";
-export * from "./DoubleDict.js";
+export * from "./helpers";
+export * from "./MurmurHash";
+export * from "./DoubleDict";

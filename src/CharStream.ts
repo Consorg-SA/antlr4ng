@@ -6,9 +6,9 @@
 
 /* eslint-disable jsdoc/require-param, @typescript-eslint/naming-convention */
 
-import { Token } from "./Token.js";
-import { type Interval } from "./misc/Interval.js";
-import { IntStream } from "./IntStream.js";
+import { Token } from "./Token";
+import type { Interval } from "./misc/Interval";
+import { IntStream } from "./IntStream";
 
 export interface CharStream extends IntStream {
     name: string;

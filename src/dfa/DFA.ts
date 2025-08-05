@@ -4,13 +4,13 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { DFASerializer } from "./DFASerializer.js";
-import { DFAState } from "./DFAState.js";
-import { LexerDFASerializer } from "./LexerDFASerializer.js";
-import { Vocabulary } from "../Vocabulary.js";
-import { DecisionState } from "../atn/DecisionState.js";
-import { StarLoopEntryState } from "../atn/StarLoopEntryState.js";
-import type { ATNConfigSet } from "../index.js";
+import { DFASerializer } from "./DFASerializer";
+import { DFAState } from "./DFAState";
+import { LexerDFASerializer } from "./LexerDFASerializer";
+import { Vocabulary } from "../Vocabulary";
+import { DecisionState } from "../atn/DecisionState";
+import { StarLoopEntryState } from "../atn/StarLoopEntryState";
+import type { ATNConfigSet } from "../index";
 
 export class DFA {
     public s0?: DFAState;

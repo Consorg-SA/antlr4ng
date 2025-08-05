@@ -4,13 +4,13 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-export * from "./XPath.js";
-export * from "./XPathElement.js";
-export * from "./XPathLexer.js";
-export * from "./XPathLexerErrorListener.js";
-export * from "./XPathRuleAnywhereElement.js";
-export * from "./XPathRuleElement.js";
-export * from "./XPathTokenAnywhereElement.js";
-export * from "./XPathTokenElement.js";
-export * from "./XPathWildcardAnywhereElement.js";
-export * from "./XPathWildcardElement.js";
+export * from "./XPath";
+export * from "./XPathElement";
+export * from "./XPathLexer";
+export * from "./XPathLexerErrorListener";
+export * from "./XPathRuleAnywhereElement";
+export * from "./XPathRuleElement";
+export * from "./XPathTokenAnywhereElement";
+export * from "./XPathTokenElement";
+export * from "./XPathWildcardAnywhereElement";
+export * from "./XPathWildcardElement";

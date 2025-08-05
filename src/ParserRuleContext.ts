@@ -6,16 +6,16 @@
 
 /* eslint-disable jsdoc/require-returns, jsdoc/require-param */
 
-import { Interval } from "./misc/Interval.js";
-import { Token } from "./Token.js";
-import { ParseTreeListener } from "./tree/ParseTreeListener.js";
-import { ParseTree } from "./tree/ParseTree.js";
-import { TerminalNode } from "./tree/TerminalNode.js";
-import { ErrorNode } from "./tree/ErrorNode.js";
-import { ATN } from "./atn/ATN.js";
-import { Trees } from "./tree/Trees.js";
-import type { Parser } from "./Parser.js";
-import type { ParseTreeVisitor } from "./tree/ParseTreeVisitor.js";
+import { Interval } from "./misc/Interval";
+import { Token } from "./Token";
+import { ParseTreeListener } from "./tree/ParseTreeListener";
+import { ParseTree } from "./tree/ParseTree";
+import { TerminalNode } from "./tree/TerminalNode";
+import { ErrorNode } from "./tree/ErrorNode";
+import { ATN } from "./atn/ATN";
+import { Trees } from "./tree/Trees";
+import type { Parser } from "./Parser";
+import type { ParseTreeVisitor } from "./tree/ParseTreeVisitor";
 
 /**
  * A rule invocation record for parsing.

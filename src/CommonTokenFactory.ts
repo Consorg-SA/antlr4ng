@@ -4,10 +4,10 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { CharStream } from "./CharStream.js";
-import { CommonToken } from "./CommonToken.js";
-import { TokenFactory } from "./TokenFactory.js";
-import { TokenSource } from "./TokenSource.js";
+import { CharStream } from "./CharStream";
+import { CommonToken } from "./CommonToken";
+import { TokenFactory } from "./TokenFactory";
+import { TokenSource } from "./TokenSource";
 
 /**
  * This default implementation of {@link TokenFactory} creates {@link CommonToken} objects.

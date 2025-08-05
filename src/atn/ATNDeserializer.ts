@@ -4,50 +4,50 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Token } from "../Token.js";
-import { ATN } from "./ATN.js";
+import { Token } from "../Token";
+import { ATN } from "./ATN";
 
-import { BasicState } from "./BasicState.js";
-import { DecisionState } from "./DecisionState.js";
-import { BlockStartState } from "./BlockStartState.js";
-import { BlockEndState } from "./BlockEndState.js";
-import { LoopEndState } from "./LoopEndState.js";
-import { RuleStartState } from "./RuleStartState.js";
-import { RuleStopState } from "./RuleStopState.js";
-import { TokensStartState } from "./TokensStartState.js";
-import { PlusLoopbackState } from "./PlusLoopbackState.js";
-import { StarLoopbackState } from "./StarLoopbackState.js";
-import { StarLoopEntryState } from "./StarLoopEntryState.js";
-import { PlusBlockStartState } from "./PlusBlockStartState.js";
-import { StarBlockStartState } from "./StarBlockStartState.js";
-import { BasicBlockStartState } from "./BasicBlockStartState.js";
+import { BasicState } from "./BasicState";
+import { DecisionState } from "./DecisionState";
+import { BlockStartState } from "./BlockStartState";
+import { BlockEndState } from "./BlockEndState";
+import { LoopEndState } from "./LoopEndState";
+import { RuleStartState } from "./RuleStartState";
+import { RuleStopState } from "./RuleStopState";
+import { TokensStartState } from "./TokensStartState";
+import { PlusLoopbackState } from "./PlusLoopbackState";
+import { StarLoopbackState } from "./StarLoopbackState";
+import { StarLoopEntryState } from "./StarLoopEntryState";
+import { PlusBlockStartState } from "./PlusBlockStartState";
+import { StarBlockStartState } from "./StarBlockStartState";
+import { BasicBlockStartState } from "./BasicBlockStartState";
 
-import { AtomTransition } from "./AtomTransition.js";
-import { SetTransition } from "./SetTransition.js";
-import { NotSetTransition } from "./NotSetTransition.js";
-import { RuleTransition } from "./RuleTransition.js";
-import { RangeTransition } from "./RangeTransition.js";
-import { ActionTransition } from "./ActionTransition.js";
-import { EpsilonTransition } from "./EpsilonTransition.js";
-import { WildcardTransition } from "./WildcardTransition.js";
-import { PredicateTransition } from "./PredicateTransition.js";
-import { PrecedencePredicateTransition } from "./PrecedencePredicateTransition.js";
+import { AtomTransition } from "./AtomTransition";
+import { SetTransition } from "./SetTransition";
+import { NotSetTransition } from "./NotSetTransition";
+import { RuleTransition } from "./RuleTransition";
+import { RangeTransition } from "./RangeTransition";
+import { ActionTransition } from "./ActionTransition";
+import { EpsilonTransition } from "./EpsilonTransition";
+import { WildcardTransition } from "./WildcardTransition";
+import { PredicateTransition } from "./PredicateTransition";
+import { PrecedencePredicateTransition } from "./PrecedencePredicateTransition";
 
-import { IntervalSet } from "../misc/IntervalSet.js";
-import { ATNDeserializationOptions } from "./ATNDeserializationOptions.js";
+import { IntervalSet } from "../misc/IntervalSet";
+import { ATNDeserializationOptions } from "./ATNDeserializationOptions";
 
-import { LexerActionType } from "./LexerActionType.js";
-import { LexerSkipAction } from "./LexerSkipAction.js";
-import { LexerChannelAction } from "./LexerChannelAction.js";
-import { LexerCustomAction } from "./LexerCustomAction.js";
-import { LexerMoreAction } from "./LexerMoreAction.js";
-import { LexerTypeAction } from "./LexerTypeAction.js";
-import { LexerPushModeAction } from "./LexerPushModeAction.js";
-import { LexerPopModeAction } from "./LexerPopModeAction.js";
-import { LexerModeAction } from "./LexerModeAction.js";
-import { ATNState } from "./ATNState.js";
-import { LexerAction } from "./LexerAction.js";
-import { Transition } from "./Transition.js";
+import { LexerActionType } from "./LexerActionType";
+import { LexerSkipAction } from "./LexerSkipAction";
+import { LexerChannelAction } from "./LexerChannelAction";
+import { LexerCustomAction } from "./LexerCustomAction";
+import { LexerMoreAction } from "./LexerMoreAction";
+import { LexerTypeAction } from "./LexerTypeAction";
+import { LexerPushModeAction } from "./LexerPushModeAction";
+import { LexerPopModeAction } from "./LexerPopModeAction";
+import { LexerModeAction } from "./LexerModeAction";
+import { ATNState } from "./ATNState";
+import { LexerAction } from "./LexerAction";
+import { Transition } from "./Transition";
 
 export class ATNDeserializer {
     public static readonly SERIALIZED_VERSION = 4;

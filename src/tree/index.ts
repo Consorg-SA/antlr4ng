@@ -4,14 +4,14 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-export * from "./AbstractParseTreeVisitor.js";
-export * from "./ErrorNode.js";
-export * from "./ParseTree.js";
-export * from "./ParseTreeListener.js";
-export * from "./ParseTreeVisitor.js";
-export * from "./ParseTreeWalker.js";
-export * from "./TerminalNode.js";
-export * from "./Trees.js";
+export * from "./AbstractParseTreeVisitor";
+export * from "./ErrorNode";
+export * from "./ParseTree";
+export * from "./ParseTreeListener";
+export * from "./ParseTreeVisitor";
+export * from "./ParseTreeWalker";
+export * from "./TerminalNode";
+export * from "./Trees";
 
-export * from "./xpath/index.js";
-export * from "./pattern/index.js";
+export * from "./xpath/index";
+export * from "./pattern/index";

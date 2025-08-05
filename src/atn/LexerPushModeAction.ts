@@ -6,10 +6,10 @@
 
 /* eslint-disable jsdoc/require-param */
 
-import { LexerActionType } from "./LexerActionType.js";
-import { LexerAction } from "./LexerAction.js";
-import { Lexer } from "../Lexer.js";
-import { MurmurHash } from "../utils/MurmurHash.js";
+import { LexerActionType } from "./LexerActionType";
+import { LexerAction } from "./LexerAction";
+import { Lexer } from "../Lexer";
+import { MurmurHash } from "../utils/MurmurHash";
 
 /**
  * Implements the `pushMode` lexer action by calling

@@ -4,7 +4,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { ATNState } from "./ATNState.js";
+import { ATNState } from "./ATNState";
 
 export class StarLoopbackState extends ATNState {
     public static override readonly stateType = ATNState.STAR_LOOP_BACK;

@@ -6,29 +6,29 @@
 
 /* eslint-disable jsdoc/require-param, jsdoc/require-returns */
 
-import { BailErrorStrategy } from "../../BailErrorStrategy.js";
-import { CharStream } from "../../CharStream.js";
-import { CommonTokenStream } from "../../CommonTokenStream.js";
-import type { Lexer } from "../../Lexer.js";
-import { ListTokenSource } from "../../ListTokenSource.js";
-import type { Parser } from "../../Parser.js";
-import { ParserInterpreter } from "../../ParserInterpreter.js";
-import { ParserRuleContext } from "../../ParserRuleContext.js";
-import { RecognitionException } from "../../RecognitionException.js";
-import { Token } from "../../Token.js";
-import { MultiMap } from "../../misc/MultiMap.js";
-import { ParseCancellationException } from "../../misc/ParseCancellationException.js";
-import type { ParseTree } from "../ParseTree.js";
-import { TerminalNode } from "../TerminalNode.js";
-import { CannotInvokeStartRuleError } from "./CannotInvokeStartRuleError.js";
-import type { Chunk } from "./Chunk.js";
-import { ParseTreeMatch } from "./ParseTreeMatch.js";
-import { ParseTreePattern } from "./ParseTreePattern.js";
-import { RuleTagToken } from "./RuleTagToken.js";
-import { StartRuleDoesNotConsumeFullPatternError } from "./StartRuleDoesNotConsumeFullPatternError.js";
-import { TagChunk } from "./TagChunk.js";
-import { TextChunk } from "./TextChunk.js";
-import { TokenTagToken } from "./TokenTagToken.js";
+import { BailErrorStrategy } from "../../BailErrorStrategy";
+import { CharStream } from "../../CharStream";
+import { CommonTokenStream } from "../../CommonTokenStream";
+import type { Lexer } from "../../Lexer";
+import { ListTokenSource } from "../../ListTokenSource";
+import type { Parser } from "../../Parser";
+import { ParserInterpreter } from "../../ParserInterpreter";
+import { ParserRuleContext } from "../../ParserRuleContext";
+import { RecognitionException } from "../../RecognitionException";
+import { Token } from "../../Token";
+import { MultiMap } from "../../misc/MultiMap";
+import { ParseCancellationException } from "../../misc/ParseCancellationException";
+import type { ParseTree } from "../ParseTree";
+import { TerminalNode } from "../TerminalNode";
+import { CannotInvokeStartRuleError } from "./CannotInvokeStartRuleError";
+import type { Chunk } from "./Chunk";
+import { ParseTreeMatch } from "./ParseTreeMatch";
+import { ParseTreePattern } from "./ParseTreePattern";
+import { RuleTagToken } from "./RuleTagToken";
+import { StartRuleDoesNotConsumeFullPatternError } from "./StartRuleDoesNotConsumeFullPatternError";
+import { TagChunk } from "./TagChunk";
+import { TextChunk } from "./TextChunk";
+import { TokenTagToken } from "./TokenTagToken";
 
 /**
  * A tree pattern matching mechanism for ANTLR {@link ParseTree}s.
