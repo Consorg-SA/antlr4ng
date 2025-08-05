@@ -12,12 +12,12 @@ export class AtomTransition extends Transition {
     /** The token type or character value; or, signifies special label. */
     public labelValue: number;
 
-    #label: IntervalSet;
+    private _label: IntervalSet;
 
     public constructor(target: ATNState, label: number) {
         super(target);
         this.labelValue = label;
-        this.#label = IntervalSet.of(label, label);
+        this._label = IntervalSet.of(label, label);
     }
 
     public /*override*/ get label(): IntervalSet {

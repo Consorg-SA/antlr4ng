@@ -12,17 +12,17 @@ export class RangeTransition extends Transition {
     public readonly start: number;
     public readonly stop: number;
 
-    readonly #label = new IntervalSet();
+    private readonly _label = new IntervalSet();
 
     public constructor(target: ATNState, start: number, stop: number) {
         super(target);
         this.start = start;
         this.stop = stop;
-        this.#label.addRange(start, stop);
+        this._label.addRange(start, stop);
     }
 
     public /*override*/ get label(): IntervalSet {
-        return this.#label;
+        return this._label;
     }
 
     public get transitionType(): number {

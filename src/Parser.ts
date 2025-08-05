@@ -101,7 +101,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
      */
     private bypassAltsAtnCache: ATN | null = null;
 
-    #inputStream!: TokenStream;
+    private _inputStream!: TokenStream;
 
     /**
      * This is all the parsing support code essentially. Most of it is error recovery stuff.
@@ -111,7 +111,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
 
         this.precedenceStack.push(0);
         this.syntaxErrors = 0;
-        this.#inputStream = input;
+        this._inputStream = input;
     }
 
     /** reset the parser's state */
@@ -316,7 +316,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
      */
     public compileParseTreePattern(pattern: string, patternRuleIndex: number, lexer?: Lexer): ParseTreePattern {
         if (!lexer) {
-            const tokenSource = this.#inputStream.tokenSource;
+            const tokenSource = this._inputStream.tokenSource;
             if (tokenSource instanceof Lexer) {
                 lexer = tokenSource;
             }
@@ -360,7 +360,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
     }
 
     public get inputStream(): TokenStream {
-        return this.#inputStream;
+        return this._inputStream;
     }
 
     public set inputStream(input: IntStream) {
@@ -368,13 +368,13 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
     }
 
     public get tokenStream(): TokenStream {
-        return this.#inputStream;
+        return this._inputStream;
     }
 
     /** Set the token stream and reset the parser. */
     public set tokenStream(input: TokenStream) {
         this.reset(false);
-        this.#inputStream = input;
+        this._inputStream = input;
     }
 
     /**

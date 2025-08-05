@@ -8,11 +8,11 @@ import { Transition } from "./Transition";
 import { ATNState } from "./ATNState";
 
 export class EpsilonTransition extends Transition {
-    readonly #outermostPrecedenceReturn: number;
+    private readonly _outermostPrecedenceReturn: number;
 
     public constructor(target: ATNState, outermostPrecedenceReturn = -1) {
         super(target);
-        this.#outermostPrecedenceReturn = outermostPrecedenceReturn;
+        this._outermostPrecedenceReturn = outermostPrecedenceReturn;
     }
 
     /**
@@ -24,7 +24,7 @@ export class EpsilonTransition extends Transition {
      * @since 4.4.1
      */
     public get outermostPrecedenceReturn(): number {
-        return this.#outermostPrecedenceReturn;
+        return this._outermostPrecedenceReturn;
     }
 
     public /*override*/ get isEpsilon(): boolean {

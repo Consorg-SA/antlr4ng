@@ -16,14 +16,14 @@ export class LexerInterpreter extends Lexer {
     private decisionToDFA: DFA[];
     private sharedContextCache = new PredictionContextCache();
 
-    #grammarFileName: string;
-    #atn: ATN;
+    private _grammarFileName: string;
+    private _atn: ATN;
 
-    #ruleNames: string[];
-    #channelNames: string[];
-    #modeNames: string[];
+    private _ruleNames: string[];
+    private _channelNames: string[];
+    private _modeNames: string[];
 
-    #vocabulary: Vocabulary;
+    private _vocabulary: Vocabulary;
 
     public constructor(grammarFileName: string, vocabulary: Vocabulary, ruleNames: string[], channelNames: string[],
         modeNames: string[], atn: ATN, input: CharStream) {
@@ -33,13 +33,13 @@ export class LexerInterpreter extends Lexer {
             throw new Error("IllegalArgumentException: The ATN must be a lexer ATN.");
         }
 
-        this.#grammarFileName = grammarFileName;
-        this.#atn = atn;
+        this._grammarFileName = grammarFileName;
+        this._atn = atn;
 
-        this.#ruleNames = ruleNames.slice(0);
-        this.#channelNames = channelNames.slice(0);
-        this.#modeNames = modeNames.slice(0);
-        this.#vocabulary = vocabulary;
+        this._ruleNames = ruleNames.slice(0);
+        this._channelNames = channelNames.slice(0);
+        this._modeNames = modeNames.slice(0);
+        this._vocabulary = vocabulary;
 
         this.decisionToDFA = atn.decisionToState.map((ds, i) => {
             return new DFA(ds, i);
@@ -49,27 +49,27 @@ export class LexerInterpreter extends Lexer {
     }
 
     public /*override*/ get atn(): ATN {
-        return this.#atn;
+        return this._atn;
     }
 
     public get grammarFileName(): string {
-        return this.#grammarFileName;
+        return this._grammarFileName;
     }
 
     public get ruleNames(): string[] {
-        return this.#ruleNames;
+        return this._ruleNames;
     }
 
     public get channelNames(): string[] {
-        return this.#channelNames;
+        return this._channelNames;
     }
 
     public get modeNames(): string[] {
-        return this.#modeNames;
+        return this._modeNames;
     }
 
     public get vocabulary(): Vocabulary {
-        return this.#vocabulary;
+        return this._vocabulary;
     }
 
     public get serializedATN(): number[] {

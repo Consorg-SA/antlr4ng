@@ -56,7 +56,7 @@ export class CommonToken implements WritableToken {
      * This is the backing field for {@link getText} when the token text is
      * explicitly set in the constructor or via {@link setText}.
      */
-    #text?: string;
+    private _text?: string;
 
     protected constructor(details: {
         source: [TokenSource | null, CharStream | null],
@@ -77,7 +77,7 @@ export class CommonToken implements WritableToken {
         this.channel = details.channel ?? Token.DEFAULT_CHANNEL;
         this.start = details.start ?? 0;
         this.stop = details.stop ?? 0;
-        this.#text = details.text;
+        this._text = details.text;
 
         if (details.line === undefined && details.source[0] !== null) {
             this.line = details.source[0].line;
@@ -163,7 +163,7 @@ export class CommonToken implements WritableToken {
             tokenIndex: this.tokenIndex,
             line: this.line,
             column: this.column,
-            text: this.#text,
+            text: this._text,
         });
 
         return t;
@@ -194,8 +194,8 @@ export class CommonToken implements WritableToken {
     }
 
     public get text(): string | undefined {
-        if (this.#text !== undefined) {
-            return this.#text;
+        if (this._text !== undefined) {
+            return this._text;
         }
 
         const input = this.inputStream;
@@ -212,13 +212,13 @@ export class CommonToken implements WritableToken {
     }
 
     public set text(text: string | undefined) {
-        this.#text = text;
+        this._text = text;
     }
 
     // WritableToken implementation
 
     public setText(text: string): void {
-        this.#text = text;
+        this._text = text;
     }
 
     public setType(ttype: number): void {

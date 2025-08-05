@@ -132,14 +132,14 @@ export abstract class Lexer extends Recognizer<LexerATNSimulator> implements Tok
     private hitEOF = false;
     private factory: TokenFactory<Token>;
 
-    #modeStack: number[] = [];
+    private _modeStack: number[] = [];
 
     /**
      * The text to be used for the next token. If this is not null, then the text
      * for the next token is fixed and is not subject to change in the normal
      * workflow of the lexer.
      */
-    #text?: string;
+    private _text?: string;
 
     public constructor(input: CharStream, options?: Partial<LexerOptions>) {
         super();
@@ -162,11 +162,11 @@ export abstract class Lexer extends Recognizer<LexerATNSimulator> implements Tok
         this.tokenStartCharIndex = -1;
         this.tokenStartColumn = -1;
         this.currentTokenStartLine = -1;
-        this.#text = undefined;
+        this._text = undefined;
 
         this.hitEOF = false;
         this.mode = Lexer.DEFAULT_MODE;
-        this.#modeStack = [];
+        this._modeStack = [];
 
         this.interpreter.reset();
     }
@@ -196,7 +196,7 @@ export abstract class Lexer extends Recognizer<LexerATNSimulator> implements Tok
                 this.currentTokenStartLine = this.interpreter.line;
                 this.tokenStartColumn = this.interpreter.column;
                 this.currentTokenColumn = this.interpreter.column;
-                this.#text = undefined;
+                this._text = undefined;
                 let continueOuter = false;
                 while (true) {
                     this.type = Token.INVALID_TYPE;
@@ -266,26 +266,26 @@ export abstract class Lexer extends Recognizer<LexerATNSimulator> implements Tok
             console.log("pushMode " + m);
         }
 
-        this.#modeStack.push(this.mode);
+        this._modeStack.push(this.mode);
         this.mode = m;
     }
 
     public popMode(): number {
-        if (this.#modeStack.length === 0) {
+        if (this._modeStack.length === 0) {
             throw new Error("Empty Stack");
         }
 
         if (LexerATNSimulator.debug) {
-            console.log("popMode back to " + this.#modeStack.slice(0, -1));
+            console.log("popMode back to " + this._modeStack.slice(0, -1));
         }
 
-        this.mode = this.#modeStack.pop()!;
+        this.mode = this._modeStack.pop()!;
 
         return this.mode;
     }
 
     public get modeStack(): number[] {
-        return this.#modeStack;
+        return this._modeStack;
     }
 
     /**
@@ -306,7 +306,7 @@ export abstract class Lexer extends Recognizer<LexerATNSimulator> implements Tok
      * custom Token objects or provide a new factory.
      */
     public emit(): Token {
-        const t = this.factory.create([this, this.input], this.type, this.#text, this.channel,
+        const t = this.factory.create([this, this.input], this.type, this._text, this.channel,
             this.tokenStartCharIndex, this.getCharIndex() - 1, this.currentTokenStartLine, this.tokenStartColumn);
         this.emitToken(t);
 
@@ -438,14 +438,14 @@ export abstract class Lexer extends Recognizer<LexerATNSimulator> implements Tok
     }
 
     public get text(): string {
-        if (this.#text) {
-            return this.#text;
+        if (this._text) {
+            return this._text;
         } else {
             return this.interpreter.getText(this.input);
         }
     }
 
     public set text(text: string) {
-        this.#text = text;
+        this._text = text;
     }
 }

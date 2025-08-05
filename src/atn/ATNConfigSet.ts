@@ -101,7 +101,7 @@ export class ATNConfigSet {
      */
     public firstStopState?: ATNConfig;
 
-    #cachedHashCode = -1;
+    private _cachedHashCode = -1;
 
     public constructor(fullCtxOrOldSet?: boolean | ATNConfigSet) {
         if (fullCtxOrOldSet !== undefined) {
@@ -146,7 +146,7 @@ export class ATNConfigSet {
 
         const existing = this.configLookup!.getOrAdd(config);
         if (existing === config) {
-            this.#cachedHashCode = -1;
+            this._cachedHashCode = -1;
             this.configs.push(config); // track order here
 
             return;
@@ -249,11 +249,11 @@ export class ATNConfigSet {
     }
 
     public hashCode(): number {
-        if (this.#cachedHashCode === -1) {
-            this.#cachedHashCode = this.computeHashCode();
+        if (this._cachedHashCode === -1) {
+            this._cachedHashCode = this.computeHashCode();
         }
 
-        return this.#cachedHashCode;
+        return this._cachedHashCode;
     }
 
     public get length(): number {
@@ -285,7 +285,7 @@ export class ATNConfigSet {
             throw new Error("This set is readonly");
         }
         this.configs = [];
-        this.#cachedHashCode = -1;
+        this._cachedHashCode = -1;
         this.configLookup = new HashSet(KeyTypeEqualityComparer.instance);
     }
 

@@ -11,11 +11,11 @@ import { HashMap } from "./HashMap";
  * This class extends `HashMap` to maintain the insertion order of the keys.
  */
 export class OrderedHashMap<K extends IComparable, V> extends HashMap<K, V> {
-    #keys: K[] = [];
+    private _keys: K[] = [];
 
     public /*override*/ clear(): void {
         super.clear();
-        this.#keys = [];
+        this._keys = [];
     }
 
     public /*override*/ get(key: K): V | undefined {
@@ -25,7 +25,7 @@ export class OrderedHashMap<K extends IComparable, V> extends HashMap<K, V> {
     public /*override*/ set(key: K, value: V): V | undefined {
         const result = super.set(key, value);
         if (result === undefined) { // The key did not exist yet.
-            this.#keys.push(key);
+            this._keys.push(key);
         }
 
         return result;
@@ -34,7 +34,7 @@ export class OrderedHashMap<K extends IComparable, V> extends HashMap<K, V> {
     public /*override*/ setIfAbsent(key: K, value: V): V | undefined {
         const result = super.setIfAbsent(key, value);
         if (result === undefined) { // The key did not exist yet.
-            this.#keys.push(key);
+            this._keys.push(key);
         }
 
         return result;
@@ -50,10 +50,10 @@ export class OrderedHashMap<K extends IComparable, V> extends HashMap<K, V> {
 
                 return {
                     next: (): IteratorResult<V> => {
-                        if (index < this.#keys.length) {
+                        if (index < this._keys.length) {
                             return {
                                 done: false,
-                                value: super.get(this.#keys[index++])!,
+                                value: super.get(this._keys[index++])!,
                             };
                         }
 
@@ -71,7 +71,7 @@ export class OrderedHashMap<K extends IComparable, V> extends HashMap<K, V> {
      * @returns an iterable of the keys in the map, in the order they were inserted.
      */
     public /*override*/ keys(): IterableIterator<K> {
-        return this.#keys[Symbol.iterator]();
+        return this._keys[Symbol.iterator]();
     }
 
     public /*override*/ equals(o: unknown): boolean {

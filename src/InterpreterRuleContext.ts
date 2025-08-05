@@ -19,12 +19,12 @@ import { ParserRuleContext } from "./ParserRuleContext";
  */
 export class InterpreterRuleContext extends ParserRuleContext {
     /** This is the backing field for {@link #getRuleIndex}. */
-    #ruleIndex: number;
+    private _ruleIndex: number;
 
     public constructor(ruleIndex: number, parent: ParserRuleContext | null, invokingStateNumber?: number) {
         super(parent, invokingStateNumber);
 
-        this.#ruleIndex = ruleIndex;
+        this._ruleIndex = ruleIndex;
     }
 
     public /*override*/ get ruleIndex(): number {

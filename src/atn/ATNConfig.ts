@@ -35,7 +35,7 @@ export class ATNConfig {
     public precedenceFilterSuppressed = false; // Not used in hash code.
 
     public get semanticContext(): SemanticContext {
-        return this.#semanticContext;
+        return this._semanticContext;
     }
 
     protected cachedHashCode: number | undefined; // Shared with LexerATNConfig.
@@ -47,9 +47,9 @@ export class ATNConfig {
      * the tree of semantic predicates encountered before reaching
      * an ATN state
      */
-    #context: PredictionContext | null = null;
+    private _context: PredictionContext | null = null;
 
-    #semanticContext: SemanticContext;
+    private _semanticContext: SemanticContext;
 
     /** Never create config classes directly. Use the factory methods below. */
     protected constructor(c: Partial<ATNConfig>, state: ATNState, context: PredictionContext | null,
@@ -57,7 +57,7 @@ export class ATNConfig {
         this.state = state;
         this.alt = c.alt!;
         this.context = context;
-        this.#semanticContext = semanticContext ?? SemanticContext.NONE;
+        this._semanticContext = semanticContext ?? SemanticContext.NONE;
         this.reachesIntoOuterContext = c.reachesIntoOuterContext!;
 
         if (c.precedenceFilterSuppressed !== undefined) {
@@ -88,7 +88,7 @@ export class ATNConfig {
             let hashCode = MurmurHash.initialize(7);
             hashCode = MurmurHash.update(hashCode, this.state.stateNumber);
             hashCode = MurmurHash.update(hashCode, this.alt);
-            hashCode = MurmurHash.updateFromComparable(hashCode, this.#context);
+            hashCode = MurmurHash.updateFromComparable(hashCode, this._context);
             hashCode = MurmurHash.updateFromComparable(hashCode, this.semanticContext);
             hashCode = MurmurHash.finish(hashCode, 4);
             this.cachedHashCode = hashCode;
@@ -103,11 +103,11 @@ export class ATNConfig {
      * execution of the ATN simulator.
      */
     public get context(): PredictionContext | null {
-        return this.#context;
+        return this._context;
     }
 
     public set context(context: PredictionContext | null) {
-        this.#context = context;
+        this._context = context;
         this.cachedHashCode = undefined;
     }
 
