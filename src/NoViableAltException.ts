@@ -33,12 +33,12 @@ export class NoViableAltException extends RecognitionException {
         offendingToken: Token | null = null, deadEndConfigs: ATNConfigSet | null = null,
         ctx: ParserRuleContext | null = null
     ) {
-        super({ message: "", recognizer, input: input ?? recognizer.inputStream, ctx: ctx ?? recognizer.context });
+        super({ message: "", recognizer, input: input ?? recognizer.inputStream as TokenStream, ctx: ctx ?? recognizer.context });
 
         ctx = ctx ?? recognizer.context;
         offendingToken = offendingToken ?? recognizer.getCurrentToken();
         startToken = startToken ?? recognizer.getCurrentToken();
-        input = input ?? recognizer.inputStream;
+        input = input ?? recognizer.inputStream as TokenStream;
 
         // Which configurations did we try at input.index() that couldn't match
         // input.LT(1)?

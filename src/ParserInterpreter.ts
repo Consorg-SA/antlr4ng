@@ -271,7 +271,7 @@ export class ParserInterpreter extends Parser {
                 predictedAlt = this.overrideDecisionAlt;
                 this.overrideDecisionReached = true;
             } else {
-                predictedAlt = this.interpreter.adaptivePredict(this.inputStream, decision, this.context);
+                predictedAlt = this.interpreter.adaptivePredict((this.inputStream as TokenStream), decision, this.context);
             }
         }
 

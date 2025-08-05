@@ -295,12 +295,12 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
     }
 
     public getTokenFactory(): TokenFactory<Token> {
-        return this.inputStream.tokenSource.tokenFactory;
+        return (this.inputStream as TokenStream).tokenSource.tokenFactory;
     }
 
     // Tell our token source and error strategy about a new way to create tokens.
     public setTokenFactory(factory: TokenFactory<Token>): void {
-        this.inputStream.tokenSource.tokenFactory = factory;
+        (this.inputStream as TokenStream).tokenSource.tokenFactory = factory;
     }
 
     /**
@@ -359,7 +359,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
         return this.syntaxErrors;
     }
 
-    public get inputStream(): TokenStream {
+    public get inputStream(): IntStream {
         return this._inputStream;
     }
 
@@ -382,7 +382,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
      * into the label for the associated token ref; e.g., x=ID.
      */
     public getCurrentToken(): Token {
-        return this.inputStream.LT(1)!;
+        return (this.inputStream as TokenStream).LT(1)!;
     }
 
     public notifyErrorListeners(msg: string, offendingToken: Token | null, err: RecognitionException | null): void {
@@ -461,7 +461,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
     public enterRule(localctx: ParserRuleContext, state: number, _ruleIndex: number): void {
         this.state = state;
         this.context = localctx;
-        this.context.start = this.inputStream.LT(1);
+        this.context.start = (this.inputStream as TokenStream).LT(1);
         if (this.buildParseTrees) {
             this.addContextToParseTree();
         }
@@ -471,9 +471,9 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
     public exitRule(): void {
         if (this.matchedEOF) {
             // If we have matched EOF, it cannot consume past EOF so we use LT(1) here.
-            this.context!.stop = this.inputStream.LT(1); // LT(1) will be end of file
+            this.context!.stop = (this.inputStream as TokenStream).LT(1); // LT(1) will be end of file
         } else {
-            this.context!.stop = this.inputStream.LT(-1); // stop node is what we just matched
+            this.context!.stop = (this.inputStream as TokenStream).LT(-1); // stop node is what we just matched
         }
 
         // Trigger event on context, before it reverts to parent.
@@ -513,7 +513,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
         this.state = state;
         this.precedenceStack.push(precedence);
         this.context = localctx;
-        this.context.start = this.inputStream.LT(1);
+        this.context.start = (this.inputStream as TokenStream).LT(1);
         this.triggerEnterRuleEvent(); // simulates rule entry for left-recursive rules
     }
 
@@ -522,7 +522,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
         const previous = this.context!;
         previous.parent = localctx;
         previous.invokingState = state;
-        previous.stop = this.inputStream.LT(-1);
+        previous.stop = (this.inputStream as TokenStream).LT(-1);
 
         this.context = localctx;
         this.context.start = previous.start;
@@ -534,7 +534,7 @@ export abstract class Parser extends Recognizer<ParserATNSimulator> {
 
     public unrollRecursionContexts(parent: ParserRuleContext | null): void {
         this.precedenceStack.pop();
-        this.context!.stop = this.inputStream.LT(-1);
+        this.context!.stop = (this.inputStream as TokenStream).LT(-1);
         const retCtx = this.context!; // Save current ctx (return value).
 
         // Unroll so _ctx is as it was before call to recursive method.

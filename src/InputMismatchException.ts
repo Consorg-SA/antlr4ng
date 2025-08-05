@@ -6,6 +6,7 @@
 
 import { RecognitionException } from "./RecognitionException";
 import { Parser } from "./Parser";
+import { TokenStream } from "./TokenStream";
 
 /**
  * This signifies any kind of mismatched input exceptions such as
@@ -13,7 +14,7 @@ import { Parser } from "./Parser";
  */
 export class InputMismatchException extends RecognitionException {
     public constructor(recognizer: Parser) {
-        super({ message: "", recognizer, input: recognizer.inputStream, ctx: recognizer.context });
+        super({ message: "", recognizer, input: recognizer.inputStream as TokenStream, ctx: recognizer.context });
         this.offendingToken = recognizer.getCurrentToken();
     }
 }

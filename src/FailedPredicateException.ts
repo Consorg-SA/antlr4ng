@@ -7,6 +7,7 @@
 import { PredicateTransition } from "./atn/PredicateTransition";
 import { Parser } from "./Parser";
 import { RecognitionException } from "./RecognitionException";
+import { TokenStream } from "./TokenStream";
 
 /**
  * A semantic predicate failed during validation. Validation of predicates
@@ -23,7 +24,7 @@ export class FailedPredicateException extends RecognitionException {
         super({
             message: formatMessage(predicate ?? "no predicate", message ?? null),
             recognizer,
-            input: recognizer.inputStream, ctx: recognizer.context,
+            input: recognizer.inputStream as TokenStream, ctx: recognizer.context,
         });
 
         const s = recognizer.atn.states[recognizer.state]!;
