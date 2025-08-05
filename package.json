@@ -1,5 +1,5 @@
 {
-    "name": "antlr4ng",
+    "name": "@consorg/antlr4ng",
     "version": "3.0.16",
     "type": "module",
     "description": "Alternative JavaScript/TypeScript runtime for ANTLR4",
@@ -8,7 +8,7 @@
     "types": "dist/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/mike-lischke/antlr4ng.git"
+        "url": "git+https://github.com/Consorg-SA/antlr4ng.git"
     },
     "keywords": [
         "lexer",
@@ -20,9 +20,9 @@
     ],
     "license": "BSD-3-Clause",
     "bugs": {
-        "url": "https://github.com/mike-lischke/antlr4ng/issues"
+        "url": "https://github.com/Consorg-SA/antlr4ng/issues"
     },
-    "homepage": "https://github.com/mike-lischke/antlr4ng",
+    "homepage": "https://github.com/Consorg-SA/antlr4ng",
     "sideEffects": false,
     "devDependencies": {
         "@eslint/js": "9.21.0",
@@ -45,7 +45,7 @@
         "vitest": "3.0.8"
     },
     "scripts": {
-        "prepublishOnly": "npm run build && npm run test",
+        "prepublishOnly": "npm run build",
         "build": "tsc && npm run build-cjs && npm run build-mjs",
         "build-with-maps": "tsc && npm run build-mjs -- --sourcemap",
         "build-and-test": "npm run build && npm run test",
@@ -58,7 +58,9 @@
         "build-bundle": "esbuild ./src/index.js --main-fields=module,main --bundle --target=es2020 --keep-names",
         "build-mjs": "npm run build-bundle -- --outfile=dist/index.mjs --format=esm",
         "build-cjs": "npm run build-bundle -- --outfile=dist/index.cjs --format=cjs",
-        "generate-xpath-lexer": "antlr-ng -Dlanguage=TypeScript --exact-output-dir -o src/tree/xpath/generated src/tree/xpath/XPathLexer.g4"
+        "generate-xpath-lexer": "antlr-ng -Dlanguage=TypeScript --exact-output-dir -o src/tree/xpath/generated src/tree/xpath/XPathLexer.g4",
+        "publish-to-npm": "npm publish . --access=public",
+        "test-publish-to-npm": "npm publish . --access=public --dry-run"
     },
     "exports": {
         "types": "./dist/index.d.ts",
