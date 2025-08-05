@@ -283,7 +283,7 @@ export class HashSet<T> implements Iterable<T> {
                 } else {
                     buf += ", ";
                 }
-                buf += o.toString();
+                buf += (o as any).toString();
             }
         }
         buf += "}";
@@ -309,7 +309,7 @@ export class HashSet<T> implements Iterable<T> {
                 if (o == null) {
                     buf += "_";
                 } else {
-                    buf += o.toString();
+                    buf += (o as any).toString();
                 }
             }
             buf += "]\n";

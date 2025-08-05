@@ -50,8 +50,8 @@ export class RecognitionException extends Error {
 
     public constructor(params: IExceptionParams) {
         super(params.message);
-        if (Error.captureStackTrace) {
-            Error.captureStackTrace(this, RecognitionException);
+        if ((Error as any).captureStackTrace) {
+            (Error as any).captureStackTrace(this, RecognitionException);
         }
 
         this.message = params.message;

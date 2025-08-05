@@ -25,7 +25,7 @@ export class ParseTreeWalker {
     public walk<T extends ParseTreeListener>(listener: T, t: ParseTree): void {
         const errorNode = t instanceof ErrorNode;
         if (errorNode) {
-            listener.visitErrorNode(t);
+            listener.visitErrorNode(t as any as ErrorNode);
         } else if (t instanceof TerminalNode) {
             listener.visitTerminal(t);
         } else {

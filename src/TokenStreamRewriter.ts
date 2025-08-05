@@ -290,7 +290,7 @@ export class TokenStreamRewriter {
                     // E.g., insert before 2, delete 2..2; update replace
                     // text to include insert before, kill insert
                     rewrites[iop.instructionIndex] = null;
-                    rop.text = String(iop.text) + (rop.text != null ? rop.text.toString() : "");
+                    rop.text = String(iop.text) + (rop.text != null ? (rop.text as any).toString() : "");
                 }
                 else if (iop.index > rop.index && iop.index <= rop.lastIndex) {
                     // delete insert as it's a no-op.
@@ -380,10 +380,10 @@ export class TokenStreamRewriter {
         let x = "";
         let y = "";
         if (a != null) {
-            x = a.toString();
+            x = (a as any).toString();
         }
         if (b != null) {
-            y = b.toString();
+            y = (b as any).toString();
         }
 
         return x + y;
@@ -436,7 +436,7 @@ class InsertBeforeOp extends RewriteOperation {
      */
     public /*override*/ execute(buf: string[]): number {
         if (this.text) {
-            buf.push(this.text.toString());
+            buf.push((this.text as any).toString());
         }
 
         if (this.tokens.get(this.index).type !== Token.EOF) {
@@ -476,7 +476,7 @@ class ReplaceOp extends RewriteOperation {
      */
     public /*override*/ execute(buf: string[]): number {
         if (this.text) {
-            buf.push(this.text.toString());
+            buf.push((this.text as any).toString());
         }
 
         return this.lastIndex + 1;
