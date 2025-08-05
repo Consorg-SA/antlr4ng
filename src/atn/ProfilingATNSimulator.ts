@@ -40,8 +40,8 @@ export class ProfilingATNSimulator extends ParserATNSimulator {
     private llStopIndex: number = 0;
 
     public constructor(parser: Parser) {
+        super(parser, parser.interpreter.atn, parser.interpreter.decisionToDFA, parser.interpreter.sharedContextCache);
         const sharedContextCache = parser.interpreter.sharedContextCache;
-        super(parser, parser.interpreter.atn, parser.interpreter.decisionToDFA, sharedContextCache);
         if (sharedContextCache) {
             this.numDecisions = this.atn.decisionToState.length;
             this.decisions = new Array<DecisionInfo>(this.numDecisions);

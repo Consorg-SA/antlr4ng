@@ -31,13 +31,14 @@ export class NoViableAltException extends RecognitionException {
 
     public constructor(recognizer: Parser, input: TokenStream | null = null, startToken: Token | null = null,
         offendingToken: Token | null = null, deadEndConfigs: ATNConfigSet | null = null,
-        ctx: ParserRuleContext | null = null) {
+        ctx: ParserRuleContext | null = null
+    ) {
+        super({ message: "", recognizer, input: input ?? recognizer.inputStream, ctx: ctx ?? recognizer.context });
+
         ctx = ctx ?? recognizer.context;
         offendingToken = offendingToken ?? recognizer.getCurrentToken();
         startToken = startToken ?? recognizer.getCurrentToken();
         input = input ?? recognizer.inputStream;
-
-        super({ message: "", recognizer, input, ctx });
 
         // Which configurations did we try at input.index() that couldn't match
         // input.LT(1)?
