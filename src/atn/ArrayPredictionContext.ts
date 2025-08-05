@@ -27,7 +27,7 @@ export class ArrayPredictionContext extends PredictionContext {
         return this;
     }
 
-    public override isEmpty(): boolean {
+    public /*override*/ isEmpty(): boolean {
         // since EMPTY_RETURN_STATE can only appear in the last position, we
         // don't need to verify that size==1
         return this.returnStates[0] === PredictionContext.EMPTY_RETURN_STATE;

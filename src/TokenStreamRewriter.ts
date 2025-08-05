@@ -474,7 +474,7 @@ class ReplaceOp extends RewriteOperation {
     /**
      * @returns the index of the next token to operate on
      */
-    public override execute(buf: string[]): number {
+    public /*override*/ execute(buf: string[]): number {
         if (this.text) {
             buf.push(this.text.toString());
         }
