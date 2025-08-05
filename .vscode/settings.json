@@ -1,4 +1,5 @@
 {
     "jest.jestCommandLine": "npm run test --",
-    "jest.rootPath": "tests"
+    "jest.rootPath": "tests",
+    "typescript.tsdk": "node_modules\\typescript\\lib"
 }
