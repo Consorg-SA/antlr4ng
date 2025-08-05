@@ -145,7 +145,7 @@ export interface IntStream {
      * {@link IntStream initializing method} has occurred after this stream was
      * constructed.
      */
-    get index(): number;
+    readonly index: number;
 
     /**
      * Set the input cursor to the position indicated by `index`. If the
@@ -182,7 +182,7 @@ export interface IntStream {
      * @throws UnsupportedOperationException if the size of the stream is
      * unknown.
      */
-    get size(): number;
+    readonly size: number;
 
     /**
      * Gets the name of the underlying symbol source. This method returns a

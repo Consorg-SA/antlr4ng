@@ -72,14 +72,11 @@ export interface TokenSource {
      * {@link Token} objects from the input.
      *
      * @param factory The {@link TokenFactory} to use for creating tokens.
-     */
-    set tokenFactory(factory: TokenFactory<Token>);
 
-    /**
      * Gets the {@link TokenFactory} this token source is currently using for
      * creating {@link Token} objects from the input.
      *
       @returns The {@link TokenFactory} currently used by this token source.
      */
-    get tokenFactory(): TokenFactory<Token>;
+    tokenFactory: TokenFactory<Token>;
 }

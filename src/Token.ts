@@ -68,7 +68,7 @@ export interface Token {
     /**
       Gets the {@link TokenSource} which created this token.
      */
-    get tokenSource(): TokenSource | null;
+    readonly tokenSource: TokenSource | null;
 
     /**
      * Gets or sets the {@link CharStream} from which this token was derived.
